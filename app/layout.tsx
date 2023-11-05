@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
-import { Merriweather, Lora } from 'next/font/google';
+import { Lora, Merriweather } from 'next/font/google';
 import './globals.css';
 import { FC } from 'react';
 import Navbar from 'components/layout/navbar';
 
 const lora = Lora({
-  variable: '--font-lora',
   subsets: ['latin'],
-  // weight: ["400", "600", "700"],
-  display: 'swap',
+  weight: ['400', '500', '700'],
+  variable: '--font-lora',
+  display: 'auto',
 });
 
 const merriweather = Merriweather({
@@ -27,10 +27,10 @@ const RootLayout: FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
   return (
-    <html className={`${lora.variable} ${merriweather.variable}`} lang="en">
-      <body suppressHydrationWarning>
+    <html className={`${lora.className} ${merriweather.variable}`} lang="en">
+      <body className="bg-eerieblack" suppressHydrationWarning>
         <Navbar />
-        <main className="flex min-h-[calc(100svh-4rem)] flex-col items-center justify-between bg-eerieblack md:min-h-[calc(100svh-5rem)]">
+        <main className="flex min-h-[calc(100svh-3.5rem)] flex-col items-center justify-between md:min-h-[calc(100svh-4.5rem)]">
           {children}
         </main>
       </body>

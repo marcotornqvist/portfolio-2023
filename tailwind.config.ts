@@ -99,7 +99,11 @@ const config: Config = {
       slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
       slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
     },
-    extend: {},
+    extend: {
+      height: {
+        18: '4.5rem',
+      },
+    },
   },
   plugins: [
     /** @type {import('tailwindcss/types/config').PluginCreator} */
@@ -109,6 +113,7 @@ const config: Config = {
         '.text-heading-1': {
           fontSize: '2.5rem',
           lineHeight: '140%',
+          fontWeight: '400',
 
           '@screen md': {
             fontSize: '3.5rem',
@@ -118,6 +123,7 @@ const config: Config = {
         '.text-heading-2': {
           fontSize: '2.25rem',
           lineHeight: '140%',
+          fontWeight: '400',
 
           '@screen md': {
             fontSize: '3rem',
@@ -127,6 +133,7 @@ const config: Config = {
         '.text-heading-3': {
           fontSize: '2rem',
           lineHeight: '140%',
+          fontWeight: '400',
 
           '@screen md': {
             fontSize: '2.5rem',
@@ -136,6 +143,7 @@ const config: Config = {
         '.text-heading-4': {
           fontSize: '1.5rem',
           lineHeight: '140%',
+          fontWeight: '400',
 
           '@screen md': {
             fontSize: '2rem',
@@ -145,6 +153,7 @@ const config: Config = {
         '.text-heading-5': {
           fontSize: '1.25rem',
           lineHeight: '140%',
+          fontWeight: '400',
 
           '@screen md': {
             fontSize: '1.5rem',
@@ -154,6 +163,7 @@ const config: Config = {
         '.text-heading-6': {
           fontSize: '1.125rem',
           lineHeight: '140%',
+          fontWeight: '400',
 
           '@screen md': {
             fontSize: '1.25rem',
@@ -175,21 +185,21 @@ const config: Config = {
         },
 
         '.container': {
-          width: '100%',
+          minWidth: '100%',
           margin: '0 auto',
-          padding: '0 1rem',
+          padding: '0 5%',
 
-          '@screen sm': {
-            padding: '0 1.5rem',
-          },
+          // '@screen sm': {
+          //   padding: '0 1.25rem',
+          // },
 
           // '@screen md': {
           //   padding: '0 4rem',
           // },
 
           '@screen 2xl': {
+            minWidth: 'initial',
             maxWidth: theme('screens.2xl'),
-            padding: '0 4rem',
           },
         },
       });

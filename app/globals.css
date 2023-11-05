@@ -4,6 +4,7 @@
 
 @layer base {
   * {
-    @apply font-lora text-white;
+    /* specify antialiased to get rid of font smoothing */
+    @apply font-lora text-white antialiased;
   }
 }
