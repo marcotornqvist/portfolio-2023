@@ -1,15 +1,21 @@
-import React from 'react'
+import { cn } from 'lib/utils';
+import React, { FC } from 'react';
 
-const Hero = () => {
+type Props = {
+  title: string;
+  subtitle: string;
+  className?: string;
+};
+
+const Hero: FC<Props> = ({ title, subtitle, className }) => {
   return (
-    <div className="container">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, soluta
-      esse repellat placeat, facere velit tempore cum ipsam corrupti deserunt
-      excepturi nostrum sapiente beatae laboriosam nisi in? Eaque, veniam
-      reprehenderit.
-      <h1 className="heading-1">moi</h1>
+    <div className={cn('w-full', className)}>
+      <div className="container">
+        <h1 className="text-heading-1">{title}</h1>
+        <p className="text-medium-normal">{subtitle}</p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
