@@ -1,13 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
+import DropdownMenu from 'components/layout/dropdown-menu';
 
 const Navbar = () => {
   return (
-    <nav className="flex h-14 items-center bg-eerieblack md:h-18">
+    <nav className="flex h-16 items-center bg-eerieblack md:h-18">
       <div className="container flex items-center justify-between">
         <Link href="/" className="text-heading-6">
           Marco Törnqvist
         </Link>
+        <DropdownMenu />
         <ul className="hidden flex-row md:flex">
           <li>
             <Link href="/projects" className="text-regular-normal px-4 py-2">

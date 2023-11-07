@@ -6,13 +6,13 @@ import Navbar from 'components/layout/navbar';
 
 const lora = Lora({
   subsets: ['latin'],
-  weight: ['400', '500', '700'],
+  weight: ['400'],
   variable: '--font-lora',
   display: 'auto',
 });
 
 const merriweather = Merriweather({
-  weight: ['400', '700'],
+  weight: ['400'],
   variable: '--font-merriweather',
   subsets: ['latin'],
   display: 'swap',
@@ -30,7 +30,7 @@ const RootLayout: FC<{
     <html className={`${lora.className} ${merriweather.variable}`} lang="en">
       <body className="bg-eerieblack" suppressHydrationWarning>
         <Navbar />
-        <main className="flex min-h-[calc(100svh-3.5rem)] flex-col items-center justify-between md:min-h-[calc(100svh-4.5rem)]">
+        <main className="flex min-h-[calc(100svh-3.5rem)] flex-col items-center md:min-h-[calc(100svh-4.5rem)]">
           {children}
         </main>
       </body>

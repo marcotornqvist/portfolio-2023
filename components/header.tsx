@@ -11,11 +11,9 @@ type Props = {
 
 const Header: FC<Props> = ({ title, subtitle, headingLevel, className }) => {
   return (
-    <div className={cn(className)}>
-      <div className="container">
-        <Heading headingLevel={headingLevel}>{title}</Heading>
-        <p>{subtitle}</p>
-      </div>
+    <div className={cn('container flex flex-row', className)}>
+      <Heading headingLevel={headingLevel}>{title}</Heading>
+      <p>{subtitle}</p>
     </div>
   );
 };
