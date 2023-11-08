@@ -3,6 +3,7 @@ import React from 'react';
 import Header from 'components/header';
 import Project from 'components/project';
 import Cards from 'components/cards';
+import Link from 'next/link';
 
 const Home = () => {
   return (
@@ -13,11 +14,25 @@ const Home = () => {
         headingLevel="h1"
       />
       <Cards />
-      {/* <Header
+      <Header
         title="Highlighted Creations"
-        subtitle="A straightforward look into some projects that best represent my capabilities in web design and development. For those interested in the more technical aspects, I encourage you to visit my GitHub."
+        subtitle={
+          <>
+            A straightforward look into some projects that best represent my
+            capabilities in web design and development. For those interested in
+            the more technical aspects, I encourage you to visit my{' '}
+            <Link
+              href="https://github.com/marcotornqvist"
+              target="_blank"
+              className="underline"
+            >
+              Github
+            </Link>
+          </>
+        }
+        // subtitle="A straightforward look into some projects that best represent my capabilities in web design and development. For those interested in the more technical aspects, I encourage you to visit my GitHub."
         headingLevel="h2"
-      /> */}
+      />
       {/* <Project
         title="Eke-marin"
         subtitle="Website renewal for a comprehensive boat docking, storage and maintenance business."

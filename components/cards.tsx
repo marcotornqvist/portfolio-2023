@@ -10,7 +10,7 @@ type CardsProps = {
 const Cards: FC<CardsProps> = ({ className }) => (
   <div
     className={clsx(
-      'container grid gap-6 pb-16 md:pb-24 lg:grid-cols-3 lg:pb-28 xl:gap-8',
+      'container grid gap-6 py-16 md:pb-24 lg:grid-cols-3 lg:pb-28 xl:gap-8',
       className,
     )}
   >
