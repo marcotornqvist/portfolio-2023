@@ -6,7 +6,7 @@ import Cards from 'components/cards';
 import Link from 'next/link';
 import CTA from 'components/cta';
 
-const Home = () => {
+const Home = ({}) => {
   return (
     <>
       <Hero

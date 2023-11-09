@@ -1,6 +1,10 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import DropdownMenu from 'components/layout/dropdown-menu';
+import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
 
 const links = [
   { href: '/projects', text: 'Projects' },
@@ -18,12 +22,15 @@ const links = [
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <nav className="flex h-16 items-center bg-eerieblack md:h-18">
       <div className="container flex items-center justify-between">
         <Link
           href="/"
-          className="hover:text-purple-hover text-heading-6 -ml-4 p-2 transition-colors duration-200"
+          className={`hover:text-purple-hover text-heading-6 -ml-4 p-2 text-white transition-colors duration-200`}
+          aria-current={pathname === '/' ? 'page' : undefined}
         >
           Marco Törnqvist
         </Link>
@@ -37,7 +44,11 @@ const Navbar = () => {
               <Link
                 href={link.href}
                 target={link.isExternal ? '_blank' : undefined}
-                className="hover:text-purple-hover text-regular-normal px-4 py-2 text-lightgrey transition-colors duration-200"
+                className={clsx(
+                  'hover:text-purple-hover text-grey text-regular-normal px-4 py-2 transition-colors duration-200',
+                  pathname === link.href && '!text-white',
+                )}
+                aria-current={pathname === link.href ? 'page' : undefined}
               >
                 {link.text}
               </Link>
