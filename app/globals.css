@@ -5,6 +5,6 @@
 @layer base {
   * {
     /* specify antialiased to get rid of font smoothing */
-    @apply font-lora text-white antialiased;
+    @apply font-lora text-white antialiased focus-visible:outline-purple;
   }
 }

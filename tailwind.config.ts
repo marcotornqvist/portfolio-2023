@@ -17,7 +17,10 @@ const config: Config = {
       black: '#000000',
       lightgrey: '#F4F4F4',
       eerieblack: '#111111',
-      purple: '#5C2AF4',
+      purple: {
+        DEFAULT: '#5C2AF4',
+        hover: '#4F1EEB',
+      },
     },
     screens: {
       xs: '320px',
@@ -106,6 +109,10 @@ const config: Config = {
       padding: {
         18: '4.5rem',
       },
+      gradientColorStops: (theme) => ({
+        transparent: 'rgba(255, 255, 255, 0)',
+        'to-custom-color': '#5C2AF4',
+      }),
     },
   },
   plugins: [
