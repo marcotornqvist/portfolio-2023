@@ -7,4 +7,8 @@
     /* specify antialiased to get rid of font smoothing */
     @apply font-lora text-white antialiased focus-visible:outline-purple;
   }
+
+  a {
+    @apply hover:text-purple-hover transition-colors duration-200;
+  }
 }

@@ -3,6 +3,7 @@ import { Lora, Merriweather } from 'next/font/google';
 import './globals.css';
 import { FC } from 'react';
 import Navbar from 'components/layout/navbar';
+import Footer from 'components/layout/footer';
 
 const lora = Lora({
   subsets: ['latin'],
@@ -33,6 +34,7 @@ const RootLayout: FC<{
         <main className="flex min-h-[calc(100svh-3.5rem)] flex-col items-center md:min-h-[calc(100svh-4.5rem)]">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

@@ -2,20 +2,21 @@
 
 import React from 'react';
 import Link from 'next/link';
-import DropdownMenu from 'components/layout/dropdown-menu';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import Menu from 'components/layout/menu';
+import { siteConfig } from 'config/site';
 
 const links = [
   { href: '/projects', text: 'Projects' },
   { href: '/contact', text: 'Contact' },
   {
-    href: 'https://www.linkedin.com/in/marco-t%C3%B6rnqvist-2b6211129/',
+    href: siteConfig.socials.linkedin,
     text: 'LinkedIn',
     isExternal: true,
   },
   {
-    href: 'https://github.com/marcotornqvist',
+    href: siteConfig.socials.github,
     text: 'Github',
     isExternal: true,
   },
@@ -29,12 +30,12 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         <Link
           href="/"
-          className={`hover:text-purple-hover text-heading-6 -ml-4 p-2 text-white transition-colors duration-200`}
+          className={`text-heading-6 -ml-4 p-2 text-white`}
           aria-current={pathname === '/' ? 'page' : undefined}
         >
           Marco Törnqvist
         </Link>
-        <DropdownMenu />
+        <Menu />
         <ul className="hidden flex-row md:flex">
           {links.map((link, index) => (
             <li
@@ -45,7 +46,7 @@ const Navbar = () => {
                 href={link.href}
                 target={link.isExternal ? '_blank' : undefined}
                 className={clsx(
-                  'hover:text-purple-hover text-grey text-regular-normal px-4 py-2 transition-colors duration-200',
+                  ' text-grey text-regular-normal px-4 py-2',
                   pathname === link.href && '!text-white',
                 )}
                 aria-current={pathname === link.href ? 'page' : undefined}

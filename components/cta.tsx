@@ -37,11 +37,12 @@ const CTA: FC<Props> = ({
               alt={alt}
               fill
               quality={85}
-              className="rounded-full" // Ensure the image is below the overlay
+              className="rounded-full"
+              sizes="(min-width: 768px) 128px, 96px"
             />
           </div>
         )}
-        <div className="flex flex-col gap-6 md:gap-8">
+        <div className="flex flex-col gap-8 md:gap-10">
           <div className="flex flex-col gap-5">
             <Heading
               headingLevel={headingLevel}

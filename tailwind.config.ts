@@ -16,7 +16,7 @@ const config: Config = {
       white: '#FFFFFF',
       black: '#000000',
       lightgrey: '#F4F4F4',
-      grey: '#D3D3D3',
+      grey: '#D9D9D9',
       eerieblack: '#111111',
       purple: {
         DEFAULT: '#5C2AF4',
@@ -190,6 +190,13 @@ const config: Config = {
 
         '.text-regular-normal': {
           fontSize: '1rem',
+          lineHeight: '170%',
+          fontWeight: '400',
+          'font-family': 'var(--font-merriweather)',
+        },
+
+        '.text-small-normal': {
+          fontSize: '0.875rem',
           lineHeight: '170%',
           fontWeight: '400',
           'font-family': 'var(--font-merriweather)',
