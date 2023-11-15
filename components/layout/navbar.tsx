@@ -30,13 +30,13 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         <Link
           href="/"
-          className={`text-heading-6 -ml-4 p-2 text-white`}
+          className={`text-heading-6 text-white`}
           aria-current={pathname === '/' ? 'page' : undefined}
         >
           Marco Törnqvist
         </Link>
         <Menu />
-        <ul className="hidden flex-row md:flex">
+        <ul className="-mr-4 hidden flex-row md:flex">
           {links.map((link, index) => (
             <li
               key={index}
@@ -46,7 +46,7 @@ const Navbar = () => {
                 href={link.href}
                 target={link.isExternal ? '_blank' : undefined}
                 className={clsx(
-                  ' text-grey text-regular-normal px-4 py-2',
+                  ' text-regular-normal px-4 py-2 text-grey',
                   pathname === link.href && '!text-white',
                 )}
                 aria-current={pathname === link.href ? 'page' : undefined}

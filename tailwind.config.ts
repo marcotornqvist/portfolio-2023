@@ -33,7 +33,7 @@ const config: Config = {
     },
     borderRadius: {
       sm: '3px',
-      md: '6px',
+      md: '8px',
       lg: '12px',
       full: '9999px',
     },
@@ -164,7 +164,7 @@ const config: Config = {
         '.text-heading-5': {
           fontSize: '1.25rem',
           lineHeight: '140%',
-          fontWeight: '400',
+          fontWeight: '700',
 
           '@screen md': {
             fontSize: '1.5rem',
@@ -206,14 +206,6 @@ const config: Config = {
           minWidth: '100%',
           margin: '0 auto',
           padding: '0 5%',
-
-          // '@screen sm': {
-          //   padding: '0 1.25rem',
-          // },
-
-          // '@screen md': {
-          //   padding: '0 4rem',
-          // },
 
           '@screen 2xl': {
             minWidth: 'initial',

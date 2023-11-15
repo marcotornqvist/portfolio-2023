@@ -34,11 +34,13 @@ const Home = ({}) => {
         // subtitle="A straightforward look into some projects that best represent my capabilities in web design and development. For those interested in the more technical aspects, I encourage you to visit my GitHub."
         headingLevel="h2"
       />
-      {/* <Project
+      <Project
         title="Eke-marin"
         subtitle="Website renewal for a comprehensive boat docking, storage and maintenance business."
         headingLevel="h3"
-      /> */}
+        buttonLink="/projects/eke-marin"
+        buttonText="View Project"
+      />
       <CTA
         title="Behind the Pixels"
         subtitle="Currently working on Software and Web Design initiatives. I earned my Bachelor's degree in Information Technology from Arcada University of Applied Sciences in 2022. Since the beginning of  2018, I've refined my expertise in software development through a blend of professional work, personal projects, and academic endeavours. Conversing in Finnish, Swedish, and English, I embrace the nuances of each language. My driving passion is to create seamless and elegant applications that help my clients succeed and reach their goals. Always eager to discuss fresh project ideas and innovations."

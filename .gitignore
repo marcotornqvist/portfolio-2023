@@ -13,6 +13,9 @@
 /.next/
 /out/
 
+public/assets/images/eke-marin-old.png 
+public/assets/images/eke-marin-large.png
+
 # production
 /build
 
