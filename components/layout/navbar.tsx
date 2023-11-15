@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         <Link
           href="/"
-          className={`text-heading-6 text-white`}
+          className="text-heading-6 -ml-4 px-4 py-2 text-white"
           aria-current={pathname === '/' ? 'page' : undefined}
         >
           Marco Törnqvist

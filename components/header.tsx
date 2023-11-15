@@ -13,7 +13,7 @@ const Header: FC<Props> = ({ title, subtitle, headingLevel, className }) => {
   return (
     <div
       className={cn(
-        'container flex flex-col gap-12 py-16 md:pb-24 lg:flex-row lg:items-center lg:gap-[5%] lg:pb-28',
+        'container flex flex-col gap-5 py-16 md:pb-24 lg:flex-row lg:items-center lg:gap-[5%] lg:pb-28',
         className,
       )}
     >

@@ -9,6 +9,6 @@
   }
 
   a {
-    @apply hover:text-purple-hover transition-colors duration-200;
+    @apply transition-colors duration-200 md:hover:text-purple-hover;
   }
 }

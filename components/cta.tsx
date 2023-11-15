@@ -28,10 +28,10 @@ const CTA: FC<Props> = ({
 }) => {
   return (
     <div className={cn('container flex justify-center', className)}>
-      <div className="flex max-w-3xl flex-col gap-12 py-16 md:gap-6 md:pb-24 lg:pb-28">
+      <div className="flex max-w-3xl flex-col gap-12 py-16 md:gap-6 md:py-24 lg:py-28">
         {image && alt && (
-          <div className="relative h-28 w-28 transform transition-transform hover:scale-110 md:mx-auto">
-            <div className="from-transparent absolute z-10 h-full w-full rounded-full bg-gradient-to-b to-purple opacity-50 transition-opacity duration-200 hover:opacity-0" />
+          <div className="relative h-28 w-28 transform transition-transform md:mx-auto md:hover:scale-110">
+            <div className="absolute z-10 h-full w-full rounded-full bg-gradient-to-b from-transparent to-purple opacity-50 transition-opacity duration-200 md:hover:opacity-0" />
             <Image
               src={image}
               alt={alt}
