@@ -202,6 +202,13 @@ const config: Config = {
           'font-family': 'var(--font-merriweather)',
         },
 
+        '.text-tiny-normal': {
+          fontSize: '0.75rem',
+          lineHeight: '170%',
+          fontWeight: '400',
+          'font-family': 'var(--font-merriweather)',
+        },
+
         '.container': {
           minWidth: '100%',
           margin: '0 auto',
