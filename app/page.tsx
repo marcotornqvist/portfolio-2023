@@ -36,7 +36,7 @@ const Home = ({}) => {
       />
       <PortfolioHeader
         title="Eke-marin"
-        subtitle="Website renewal for a comprehensive boat docking, storage and maintenance business."
+        subtitle="Website renewal for a comprehensive boat docking, storage, maintenance and crane lifting service business."
         headingLevel="h3"
         buttonLink="/projects/eke-marin"
         buttonText="View Project"

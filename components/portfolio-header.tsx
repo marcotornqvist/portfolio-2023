@@ -37,7 +37,9 @@ const PortfolioHeader: FC<Props> = ({
               src="/assets/images/eke-marin.png"
               alt="Eke-marin"
               fill
-              className="rounded-md object-cover shadow-2xl md:rounded-lg"
+              className={clsx(
+                'rounded-md object-cover shadow-2xl md:rounded-lg',
+              )}
               priority
             />
           </div>
@@ -55,7 +57,7 @@ const PortfolioHeader: FC<Props> = ({
                 </Heading>
               )}
               {subtitle && (
-                <p className="text-regular-normal md:text-medium-normal">
+                <p className="text-regular-normal max-w-prose md:text-medium-normal">
                   {subtitle}
                 </p>
               )}

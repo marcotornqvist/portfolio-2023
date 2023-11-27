@@ -12,8 +12,8 @@ const Project: FC = () => {
         title="Eke-marin"
         subtitle={
           <>
-            Website renewal for a comprehensive boat docking, storage and
-            maintenance business.
+            Website renewal for Eke-marin. A comprehensive boat docking,
+            storage, maintenance and crane lifting service business.
           </>
         }
         buttonText="Live Site"

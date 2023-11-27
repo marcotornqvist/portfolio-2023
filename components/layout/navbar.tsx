@@ -38,10 +38,7 @@ const Navbar = () => {
         <Menu />
         <ul className="-mr-4 hidden flex-row md:flex">
           {links.map((link, index) => (
-            <li
-              key={index}
-              className={index === links.length - 1 ? '-mr-4' : ''}
-            >
+            <li key={index}>
               <Link
                 href={link.href}
                 target={link.isExternal ? '_blank' : undefined}

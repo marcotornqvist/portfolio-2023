@@ -50,7 +50,7 @@ const Header: FC<Props> = ({
         </Heading>
         <p
           className={clsx(
-            'text-regular-normal md:text-medium-normal max-lg:max-w-prose',
+            'text-regular-normal max-w-prose md:text-medium-normal',
             !buttonExists && 'lg:w-[50%]',
           )}
         >
