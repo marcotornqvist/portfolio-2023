@@ -30,6 +30,7 @@ const Contact: FC = () => {
                     alt="mailbox icon"
                     height={16}
                     width={20}
+                    aria-hidden="true"
                   />
                 </div>
                 <span className="text-regular-normal">
@@ -45,6 +46,7 @@ const Contact: FC = () => {
                     alt="phone icon"
                     height={19}
                     width={19}
+                    aria-hidden="true"
                   />
                 </div>
                 <span className="text-regular-normal">+358 440 223 519</span>
@@ -58,6 +60,7 @@ const Contact: FC = () => {
                     alt="map icon"
                     height={20}
                     width={16}
+                    aria-hidden="true"
                   />
                 </div>
                 <span className="text-regular-normal">Southern Finland</span>

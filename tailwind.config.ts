@@ -88,22 +88,22 @@ const config: Config = {
         to: { height: '0' },
       },
     },
-    animation: {
-      fadeUp: 'fadeUp 200ms forwards',
-      fadeUpSlow: 'fadeUp 500ms forwards',
-      fadeIn: 'fadeIn 200ms forwards',
-      fadeInSlow: 'fadeIn 500ms forwards',
-      fadeOut: 'fadeOut 200ms forwards',
-      scaleIn: 'scaleIn 500ms forwards cubic-bezier(0.16, 1, 0.3, 1)',
-      menuShow: 'menuShow 300ms',
-      menuHide: 'menuHide 300ms',
-      navbarShow: 'navbarShow 200ms forwards',
-      navbarHide: 'navbarHide 200ms forwards',
-      dropdownShow: 'dropdownShow 200ms cubic-bezier(0.16, 1, 0.3, 1)',
-      dropdownHide: 'dropdownHide 200ms cubic-bezier(0.16, 1, 0.3, 1)',
-      slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
-      slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
-    },
+    // animation: {
+    //   fadeUp: 'fadeUp 200ms forwards',
+    //   fadeUpSlow: 'fadeUp 500ms forwards',
+    //   fadeIn: 'fadeIn 200ms forwards',
+    //   fadeInSlow: 'fadeIn 500ms forwards',
+    //   fadeOut: 'fadeOut 200ms forwards',
+    //   scaleIn: 'scaleIn 500ms forwards cubic-bezier(0.16, 1, 0.3, 1)',
+    //   menuShow: 'menuShow 300ms',
+    //   menuHide: 'menuHide 300ms',
+    //   navbarShow: 'navbarShow 200ms forwards',
+    //   navbarHide: 'navbarHide 200ms forwards',
+    //   dropdownShow: 'dropdownShow 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+    //   dropdownHide: 'dropdownHide 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+    //   slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+    //   slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+    // },
     extend: {
       height: {
         18: '4.5rem',
@@ -118,6 +118,7 @@ const config: Config = {
     },
   },
   plugins: [
+    require('tailwindcss-animate'),
     /** @type {import('tailwindcss/types/config').PluginCreator} */
     plugin(function ({ addComponents, theme }) {
       // Add your custom styles here
