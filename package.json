@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "email-dev": "email dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -14,8 +15,7 @@
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
-    "@react-email/button": "^0.0.11",
-    "@react-email/html": "^0.0.6",
+    "@react-email/components": "^0.0.11",
     "@react-email/render": "^0.0.9",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",

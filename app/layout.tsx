@@ -32,7 +32,10 @@ const RootLayout: FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
   return (
-    <html className={`${lora.className} ${merriweather.variable}`} lang="en">
+    <html
+      className={`${lora.className} ${merriweather.variable} [&>.grecaptcha-badge]:invisible`}
+      lang="en"
+    >
       <body className="bg-eerieblack" suppressHydrationWarning>
         <Navbar />
         <main className="flex min-h-[calc(100svh-3.5rem)] flex-col items-center md:min-h-[calc(100svh-4.5rem)]">

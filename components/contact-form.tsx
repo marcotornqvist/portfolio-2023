@@ -19,14 +19,15 @@ import { Textarea } from './ui/textarea';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { useState } from 'react';
 import { ContactSchema } from 'lib/validationSchemas';
+import Link from 'next/link';
 
 const ContactForm = () => {
   const form = useForm<z.infer<typeof ContactSchema>>({
     resolver: zodResolver(ContactSchema),
     defaultValues: {
-      name: 'Marco Törnqvist',
-      email: 'marcotornqvist@gmail.com',
-      message: 'Hi. Could we talk some buziness?',
+      name: '',
+      email: '',
+      message: '',
     },
   });
   const [error, setError] = useState<string | null>(null);
@@ -66,13 +67,13 @@ const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-1 flex-col gap-6"
+        className="flex flex-1 flex-col"
       >
         <FormField
           control={form.control}
           name="name"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="mb-6">
               <FormLabel>Name</FormLabel>
               <FormControl>
                 <Input {...field} />
@@ -85,7 +86,7 @@ const ContactForm = () => {
           control={form.control}
           name="email"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="mb-6">
               <FormLabel>Email</FormLabel>
               <FormControl>
                 <Input {...field} />
@@ -98,15 +99,29 @@ const ContactForm = () => {
           control={form.control}
           name="message"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="mb-2">
               <FormLabel>Message</FormLabel>
               <FormControl>
-                <Textarea {...field} />
+                <Textarea {...field} className="lg:min-h-[250px]" />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
+        <small className="text-small-normal mb-6">
+          This site is protected by reCAPTCHA and the Google{' '}
+          <Link
+            href="https://policies.google.com/privacy"
+            className="underline"
+          >
+            Privacy Policy
+          </Link>{' '}
+          and{' '}
+          <Link href="https://policies.google.com/terms" className="underline">
+            Terms of Service
+          </Link>{' '}
+          apply.
+        </small>
         <Button
           type="submit"
           variant={'secondary'}
@@ -122,6 +137,11 @@ const ContactForm = () => {
             ? 'Sent!'
             : 'Submit'}
         </Button>
+        {form.formState.isSubmitSuccessful && !error && (
+          <span className="text-small-normal">
+            Thanks for reaching out! I'll get back to you as soon as possible.
+          </span>
+        )}
         {error && <span className="text-destructive">{error}</span>}
       </form>
     </Form>
