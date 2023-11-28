@@ -17,7 +17,9 @@ const Hero: FC<Props> = ({ headingLevel, title, subtitle, className }) => {
           <Heading headingLevel={headingLevel} className="text-heading-1">
             {title}
           </Heading>
-          <p className="text-medium-normal max-w-prose">{subtitle}</p>
+          <p className="text-regular-normal max-w-prose md:text-medium-normal">
+            {subtitle}
+          </p>
         </div>
       </div>
     </div>

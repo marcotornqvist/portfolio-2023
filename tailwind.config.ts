@@ -18,6 +18,7 @@ const config: Config = {
       lightgrey: '#F4F4F4',
       grey: '#D9D9D9',
       eerieblack: '#111111',
+      destructive: '#EF2820',
       purple: {
         DEFAULT: '#5C2AF4',
         hover: '#4F1EEB',
@@ -197,6 +198,13 @@ const config: Config = {
 
         '.text-small-normal': {
           fontSize: '0.875rem',
+          lineHeight: '170%',
+          fontWeight: '400',
+          'font-family': 'var(--font-merriweather)',
+        },
+
+        '.text-tiny-normal': {
+          fontSize: '0.75rem',
           lineHeight: '170%',
           fontWeight: '400',
           'font-family': 'var(--font-merriweather)',

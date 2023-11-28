@@ -4,15 +4,17 @@ import Link from 'next/link';
 import React, { FC } from 'react';
 import Heading, { HeadingLevel } from './ui/heading';
 import { buttonVariants } from './ui/button';
+import clsx from 'clsx';
 
 type Props = {
   image?: string;
   alt?: string;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   buttonText: string;
   buttonLink: string;
   className?: string;
+  buttonClassName?: string;
   headingLevel: HeadingLevel;
 };
 
@@ -24,6 +26,7 @@ const CTA: FC<Props> = ({
   buttonText,
   buttonLink,
   className,
+  buttonClassName,
   headingLevel,
 }) => {
   return (
@@ -50,9 +53,13 @@ const CTA: FC<Props> = ({
             >
               {title}
             </Heading>
-            <p className="text-medium-normal md:text-center">{subtitle}</p>
+            {subtitle && (
+              <p className="text-regular-normal md:text-medium-normal md:text-center">
+                {subtitle}
+              </p>
+            )}
           </div>
-          <div className="flex md:justify-center">
+          <div className={cn('flex md:justify-center', buttonClassName)}>
             <Link href={buttonLink} className={buttonVariants()}>
               {buttonText}
               <Image

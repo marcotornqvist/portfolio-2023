@@ -6,18 +6,19 @@ import clsx from 'clsx';
 
 const buttonVariants = cva(
   clsx(
-    'flex items-center gap-4 bg-purple w-fit py-3 pr-6 pl-8 h-12 md:h-14 rounded-full text-small-normal md:text-regular-normal whitespace-nowrap min-w-fit',
-    'md:hover:bg-purple-hover md:hover:text-white transition-colors duration-200',
+    'text-small-normal flex h-12 w-fit min-w-fit items-center gap-4 whitespace-nowrap bg-purple md:text-regular-normal md:h-14',
+    'transition-colors duration-200 md:hover:bg-purple-hover md:hover:text-white',
     'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple',
   ),
   {
     variants: {
       variant: {
-        default: '',
+        primary: 'rounded-full py-3 pl-8 pr-6',
+        secondary: 'rounded-sm px-8 py-3',
       },
     },
     defaultVariants: {
-      variant: 'default',
+      variant: 'primary',
     },
   },
 );

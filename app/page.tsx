@@ -1,10 +1,10 @@
 import Hero from 'components/hero';
 import React from 'react';
 import Header from 'components/header';
-import Project from 'components/project';
 import Cards from 'components/cards';
 import Link from 'next/link';
 import CTA from 'components/cta';
+import PortfolioHeader from 'components/portfolio-header';
 
 const Home = ({}) => {
   return (
@@ -34,9 +34,9 @@ const Home = ({}) => {
         // subtitle="A straightforward look into some projects that best represent my capabilities in web design and development. For those interested in the more technical aspects, I encourage you to visit my GitHub."
         headingLevel="h2"
       />
-      <Project
+      <PortfolioHeader
         title="Eke-marin"
-        subtitle="Website renewal for a comprehensive boat docking, storage and maintenance business."
+        subtitle="Website renewal for a comprehensive boat docking, storage, maintenance and crane lifting service business."
         headingLevel="h3"
         buttonLink="/projects/eke-marin"
         buttonText="View Project"
