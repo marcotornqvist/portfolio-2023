@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import Menu from 'components/layout/menu';
 import { siteConfig } from 'config/site';
 
-const links = [
+export const links = [
   { href: '/projects', text: 'Projects' },
   { href: '/contact', text: 'Contact' },
   {
@@ -35,7 +35,9 @@ const Navbar = () => {
         >
           Marco Törnqvist
         </Link>
-        <Menu />
+        <div className="md:hidden">
+          <Menu />
+        </div>
         <ul className="-mr-4 hidden flex-row md:flex">
           {links.map((link, index) => (
             <li key={index}>

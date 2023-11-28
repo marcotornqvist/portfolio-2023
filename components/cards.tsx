@@ -22,6 +22,7 @@ const Cards: FC<CardsProps> = ({ className }) => (
           width={32}
           height={32}
           className="h-8 w-8 md:h-9 md:w-9"
+          aria-hidden="true"
         />
       }
       title="Full-stack Development"
@@ -35,6 +36,7 @@ const Cards: FC<CardsProps> = ({ className }) => (
           width={36}
           height={36}
           className="h-[2rem] w-[2rem] md:h-9 md:w-9"
+          aria-hidden="true"
         />
       }
       title="Web Design"
@@ -48,6 +50,7 @@ const Cards: FC<CardsProps> = ({ className }) => (
           width={32}
           height={32}
           className="h-[30px] w-[30px] md:h-9 md:w-9"
+          aria-hidden="true"
         />
       }
       title="Tools"
@@ -67,7 +70,7 @@ const Card: FC<CardProps> = ({ icon, title, text, className }) => {
   return (
     <div
       className={cn(
-        'md:pb-18 flex w-full flex-col gap-4 rounded-md bg-purple p-6 pb-10 md:pt-8 xl:px-8 xl:pb-[72px]',
+        'flex w-full flex-col gap-4 rounded-md bg-purple p-6 pb-10 md:pb-18 md:pt-8 xl:px-8 xl:pb-[72px]',
         className,
       )}
     >

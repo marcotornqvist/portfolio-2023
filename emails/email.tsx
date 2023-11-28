@@ -4,15 +4,11 @@ import { ContactSchema } from 'lib/validationSchemas';
 
 import {
   Body,
-  Button,
   Container,
   Head,
   Hr,
   Html,
-  Img,
   Tailwind,
-  Preview,
-  Section,
   Text,
 } from '@react-email/components';
 import * as React from 'react';

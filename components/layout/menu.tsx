@@ -1,60 +1,79 @@
 'use client';
 
 import { FC, useState } from 'react';
-import * as Dialog from '@radix-ui/react-dialog';
 import Link from 'next/link';
 import clsx from 'clsx';
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetHeader,
+  SheetClose,
+} from 'components/ui/sheet';
+import { links } from './navbar';
+import { cn } from 'lib/utils';
+import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 type MenuProps = {
   btnClassName?: string;
 };
 
 const Menu: FC<MenuProps> = ({ btnClassName }) => {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  const genericHamburgerLine = `h-0.5 w-6 rounded-full bg-white transition ease transform duration-300`;
+
   return (
-    <Dialog.Root open={open} onOpenChange={() => setOpen(!open)}>
-      <Dialog.Trigger asChild>
+    <Sheet open={open} onOpenChange={() => setOpen(!open)}>
+      <SheetTrigger asChild>
         <button
-          className={clsx('outline-none md:hidden', btnClassName)}
+          className={cn(
+            '-mr-4 flex flex-col gap-1.5 p-4 md:hidden',
+            btnClassName,
+          )}
           aria-controls={'Open Menu'}
           role="navigation"
+          onClick={() => setOpen(!open)}
         >
-          {open ? (
-            <div className="relative">
-              <div className="absolute h-[3px] w-6 rotate-45 bg-white"></div>
-              <div className="h-[3px] w-6 -rotate-45 bg-white"></div>
-            </div>
-          ) : (
-            <div className="flex flex-col gap-1">
-              <div className="h-[3px] w-6 bg-white"></div>
-              <div className="h-[3px] w-6 bg-white"></div>
-              <div className="h-[3px] w-6 bg-white"></div>
-            </div>
-          )}
+          <div className={clsx(genericHamburgerLine, open && '-rotate-45')} />
+          <div
+            className={clsx(
+              genericHamburgerLine,
+              open && '-translate-y-2 rotate-45',
+            )}
+          />
         </button>
-      </Dialog.Trigger>
-      <Dialog.Portal>
-        <Dialog.Overlay
-          className={clsx(
-            'bg-overlay fixed top-16 z-20 w-[100vw] md:top-20',
-            'data-[state=closed]:animate-fadeOut data-[state=open]:animate-fadeIn lg:hidden',
-          )}
-        />
-        <Dialog.Content
-          className={clsx(
-            'fixed bottom-0 top-16 z-30 h-[calc(100vh_-_4rem)] w-full overflow-y-scroll bg-white pb-40 pt-12 outline-none md:top-20 md:h-[calc(100vh_-_5rem)]',
-            'data-[state=closed]:animate-menuHide data-[state=open]:animate-menuShow lg:hidden',
-          )}
-        >
-          <div className="flex min-h-full flex-col items-center justify-center">
-            <div className="mx-auto mb-12 flex h-full w-min flex-col gap-12">
-              <Link href="/">Moi</Link>
-            </div>
-          </div>
-        </Dialog.Content>
-      </Dialog.Portal>
-    </Dialog.Root>
+      </SheetTrigger>
+      <SheetContent className="md:hidden">
+        <SheetHeader className="px-2 pt-6">
+          <SheetClose className="-ml-4 px-4 py-4">
+            <Image
+              src="/assets/icons/arrow-right.svg"
+              alt="Arrow left"
+              width={24}
+              height={12}
+              className="rotate-180"
+            />
+          </SheetClose>
+        </SheetHeader>
+        <ul className="-ml-4 flex h-full flex-col gap-2 px-2 pt-24">
+          {links.map((link, index) => (
+            <li key={index} className="flex" onClick={() => setOpen(!open)}>
+              <Link
+                href={link.href}
+                target={link.isExternal ? '_blank' : undefined}
+                className="text-regular-normal min-h-full min-w-full px-4 py-4 text-white"
+                aria-current={pathname === link.href ? 'page' : undefined}
+              >
+                {link.text}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </SheetContent>
+    </Sheet>
   );
 };
 

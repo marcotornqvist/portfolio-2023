@@ -4,13 +4,6 @@ import Image from 'next/image';
 import clsx from 'clsx';
 import RecaptachaProvider from 'components/recaptcha-provider';
 
-type Item = {
-  icon: string;
-  alt: string;
-  text: string;
-  link?: string;
-};
-
 const Contact: FC = () => {
   const styles = clsx('flex items-center gap-3');
 
@@ -37,6 +30,7 @@ const Contact: FC = () => {
                     alt="mailbox icon"
                     height={16}
                     width={20}
+                    aria-hidden="true"
                   />
                 </div>
                 <span className="text-regular-normal">
@@ -52,6 +46,7 @@ const Contact: FC = () => {
                     alt="phone icon"
                     height={19}
                     width={19}
+                    aria-hidden="true"
                   />
                 </div>
                 <span className="text-regular-normal">+358 440 223 519</span>
@@ -65,6 +60,7 @@ const Contact: FC = () => {
                     alt="map icon"
                     height={20}
                     width={16}
+                    aria-hidden="true"
                   />
                 </div>
                 <span className="text-regular-normal">Southern Finland</span>
