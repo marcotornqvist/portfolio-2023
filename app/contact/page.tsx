@@ -4,13 +4,6 @@ import Image from 'next/image';
 import clsx from 'clsx';
 import RecaptachaProvider from 'components/recaptcha-provider';
 
-type Item = {
-  icon: string;
-  alt: string;
-  text: string;
-  link?: string;
-};
-
 const Contact: FC = () => {
   const styles = clsx('flex items-center gap-3');
 

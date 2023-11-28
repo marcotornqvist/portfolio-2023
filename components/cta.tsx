@@ -4,7 +4,6 @@ import Link from 'next/link';
 import React, { FC } from 'react';
 import Heading, { HeadingLevel } from './ui/heading';
 import { buttonVariants } from './ui/button';
-import clsx from 'clsx';
 
 type Props = {
   image?: string;

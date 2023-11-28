@@ -1,15 +1,11 @@
 'use client';
 
-// components/Footer.js
 import Link from 'next/link';
 import Image from 'next/image';
 import { siteConfig } from 'config/site';
 import clsx from 'clsx';
-import { usePathname } from 'next/navigation';
 
 const Footer = () => {
-  const pathname = usePathname();
-
   return (
     <footer className="py-12 lg:py-20">
       <div className="container mx-auto">
