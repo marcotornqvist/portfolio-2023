@@ -11,4 +11,9 @@
   a {
     @apply transition-colors duration-200 md:hover:text-purple-hover;
   }
+
+  .grecaptcha-badge {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
 }

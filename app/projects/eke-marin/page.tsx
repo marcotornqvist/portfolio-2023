@@ -26,9 +26,10 @@ const Project: FC = () => {
           'Figma',
           'NextJS 13 App Dir',
           'TypeScript',
+          'Tailwind CSS',
+          'Radix UI',
           'AWS SES',
           'Vercel',
-          'Radix UI',
           'Accessibility',
         ]}
       />
@@ -39,12 +40,14 @@ const Project: FC = () => {
         <div className="flex flex-col gap-6 md:gap-8 lg:min-w-[55%]">
           <p className="text-regular-normal max-w-prose md:text-medium-normal">
             A longstanding comprehensive boat docking, storage, and maintenance
-            business, faced significant digital hurdles. Their previous website
-            was a relic of an older era, visually outdated and plagued with
-            subpar lighthouse scores. A major stumbling block was its poor SEO,
-            which made the business virtually invisible in online searches. This
-            digital obscurity meant fewer new customers were discovering their
-            services, even though their legacy customer base remained robust.
+            business, faced significant digital hurdles. The previous website,
+            while reflecting the company's rich history, had become increasingly
+            dated in both appearance and functionality. It struggled with lower
+            performance in key online metrics, such as search engine
+            optimization (SEO), which significantly limited its visibility in
+            online searches. This issue somewhat hindered the attraction of new
+            customers, in spite of the strong and steadfast support from the
+            existing client base.
           </p>
           <p className="text-regular-normal max-w-prose md:text-medium-normal">
             The primary goal of the website renewal was straightforward yet
@@ -92,13 +95,13 @@ const Project: FC = () => {
         <div className="flex flex-col gap-6 md:gap-8 lg:min-w-[55%]">
           <p className="text-regular-normal max-w-prose md:text-medium-normal">
             The website renewal led to tangible positive outcomes for the
-            business. There was a noticeable increase in new customers, and web
-            traffic grew steadily. The refreshed design not only brought the
-            business's digital presence up-to-date but also resonated with
-            visitors, fostering a sense of trust and professionalism. While
-            there’s always room for growth and learning, the initial feedback
-            suggests that the revamped website aligns well with the company's
-            vision and the needs of its clients.
+            business. There was a noticeable increase in the website's web
+            traffic. The refreshed design not only brought the business's
+            digital presence up-to-date but also resonated with visitors,
+            fostering a sense of trust and professionalism. While there’s always
+            room for growth and learning, the initial feedback suggests that the
+            revamped website aligns well with the company's vision and the needs
+            of its clients.
           </p>
         </div>
       </Content>

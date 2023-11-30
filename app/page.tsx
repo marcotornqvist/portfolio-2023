@@ -11,7 +11,7 @@ const Home = ({}) => {
     <>
       <Hero
         title="Marco Törnqvist"
-        subtitle="Hi, I'm a Software Developer & Web Designer based in Finland. My driving passion is to create seamless and elegant applications that help my clients succeed and reach their goals."
+        subtitle="Hi, I'm a Software Developer based in Finland. My driving passion is to create seamless and elegant applications that help my clients succeed and reach their goals."
         headingLevel="h1"
       />
       <Cards />
