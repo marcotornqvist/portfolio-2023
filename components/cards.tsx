@@ -25,8 +25,8 @@ const Cards: FC<CardsProps> = ({ className }) => (
           aria-hidden="true"
         />
       }
-      title="Full-stack Development"
-      text="Expertise in crafting dynamic and responsive applications using NextJS, NodeJS, and Headless CMS solutions."
+      title="Full-stack"
+      text="Expertise in full-stack development, proficient in integrating modern technologies with emphasis on end-to-end testing, accessibility, and robust backend systems."
     />
     <Card
       icon={
@@ -40,7 +40,7 @@ const Cards: FC<CardsProps> = ({ className }) => (
         />
       }
       title="Web Design"
-      text="Proficient in creating intuitive and visually appealing designs with Figma and Webflow."
+      text="Proficient in web design, focusing on crafting intuitive and visually appealing user interfaces. Expertise in utilizing leading design tools to bring creative visions to life."
     />
     <Card
       icon={
@@ -54,7 +54,7 @@ const Cards: FC<CardsProps> = ({ className }) => (
         />
       }
       title="Tools"
-      text="Skilled in leveraging the power of AWS & Vercel, managing projects on Github, and implementing advanced AI tools."
+      text="Skilled in leveraging cloud platforms, CI/CD pipelines and version control systems for efficient project deployment and management."
     />
   </div>
 );
