@@ -26,7 +26,7 @@ const Cards: FC<CardsProps> = ({ className }) => (
         />
       }
       title="Full-stack"
-      text="Expertise in full-stack development, proficient in integrating modern technologies with emphasis on end-to-end testing, accessibility, and robust backend systems."
+      text="Expertise in full-stack development, with a strong emphasis on creating responsive and user-friendly frontend interfaces, end-to-end testing, accessibility, and robust backend systems."
     />
     <Card
       icon={
