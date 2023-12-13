@@ -137,7 +137,7 @@ const ContactForm = () => {
             : 'Submit'}
         </Button>
         {form.formState.isSubmitSuccessful && !error && (
-          <span className="text-small-normal">
+          <span className="text-small-normal mt-6">
             Thanks for reaching out! I'll get back to you as soon as possible.
           </span>
         )}

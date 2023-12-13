@@ -219,6 +219,7 @@ const config: Config = {
           '@screen 2xl': {
             minWidth: 'initial',
             maxWidth: theme('screens.2xl'),
+            padding: '0 4.5rem',
           },
         },
       });
