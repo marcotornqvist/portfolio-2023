@@ -22,7 +22,7 @@ const Cards: FC<CardsProps> = ({ className }) => (
           width={32}
           height={32}
           className="h-8 w-8 md:h-9 md:w-9"
-          aria-hidden="true"
+          aria-hidden
         />
       }
       title="Full-stack"
@@ -36,7 +36,7 @@ const Cards: FC<CardsProps> = ({ className }) => (
           width={36}
           height={36}
           className="h-[2rem] w-[2rem] md:h-9 md:w-9"
-          aria-hidden="true"
+          aria-hidden
         />
       }
       title="Web Design"
@@ -50,7 +50,7 @@ const Cards: FC<CardsProps> = ({ className }) => (
           width={32}
           height={32}
           className="h-[30px] w-[30px] md:h-9 md:w-9"
-          aria-hidden="true"
+          aria-hidden
         />
       }
       title="Tools"

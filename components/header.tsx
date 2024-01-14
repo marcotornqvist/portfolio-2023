@@ -65,7 +65,7 @@ const Header: FC<Props> = ({
             alt="Arrow right"
             width={20}
             height={10}
-            aria-hidden="true"
+            aria-hidden
           />
         </Link>
       )}
