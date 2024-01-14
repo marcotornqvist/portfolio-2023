@@ -1,20 +1,26 @@
-import React, { FC } from "react";
+import { buttonVariants } from 'components/ui/button';
+import Link from 'next/link';
+import React, { FC } from 'react';
+import Image from 'next/image';
 
 const NotFound: FC = () => {
   return (
-    <div className="container flex min-h-[calc(100vh_-_4rem)] flex-col items-center justify-center md:min-h-[calc(100vh_-_5rem)]">
-      <div className="mx-auto pb-16 text-center">
-        Page not found
-        {/* <h1 className="text-h2 mb-8">{t("title")}</h1>
-        <p className="text-body1 mx-auto mb-12 max-w-prose md:max-w-[800px]">
-          {t("description")}
-        </p>
-        <Link
-          href={"/" + locale}
-          className={buttonVariants({ size: "full", borderRadius: "full" })}
-        >
-          {t("cta-text")}
-        </Link> */}
+    <div className="container flex min-h-[calc(100vh_-_4rem)] flex-col items-center justify-center">
+      <div className="mx-auto flex flex-col items-center pb-16 text-center">
+        <div className="mb-12 md:mb-16">
+          <h1 className="text-heading-1">404</h1>
+          <h2 className="text-heading-2">Page not found</h2>
+        </div>
+        <Link href="/" className={buttonVariants()}>
+          Go back home
+          <Image
+            src="/assets/icons/arrow-right.svg"
+            alt="Arrow right"
+            width={20}
+            height={10}
+            aria-hidden="true"
+          />
+        </Link>
       </div>
     </div>
   );
