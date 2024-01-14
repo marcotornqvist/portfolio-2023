@@ -2,7 +2,6 @@ import Content from 'components/content';
 import CTA from 'components/cta';
 import Header from 'components/header';
 import PortfolioHeader from 'components/portfolio-header';
-import Heading from 'components/ui/heading';
 import React, { FC } from 'react';
 
 const Project: FC = () => {
