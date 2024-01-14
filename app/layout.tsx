@@ -36,7 +36,7 @@ const RootLayout: FC<{
       className={`${lora.className} ${merriweather.variable} [&>.grecaptcha-badge]:invisible`}
       lang="en"
     >
-      <body suppressHydrationWarning>
+      <body className="bg-[#050505]" suppressHydrationWarning>
         <div className="bg-grain" />
         <Navbar />
         <main className="flex min-h-[calc(100svh-3.5rem)] flex-col items-center md:min-h-[calc(100svh-4.5rem)]">

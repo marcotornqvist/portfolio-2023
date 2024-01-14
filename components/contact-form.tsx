@@ -19,6 +19,7 @@ import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { useState } from 'react';
 import { ContactSchema } from 'lib/validationSchemas';
 import Link from 'next/link';
+import InputSpotlightBorder from './ui/inputSpotlightBorder';
 
 const ContactForm = () => {
   const form = useForm<z.infer<typeof ContactSchema>>({

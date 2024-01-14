@@ -9,6 +9,7 @@ const Contact: FC = () => {
 
   return (
     <div className="container flex flex-col gap-[5%] py-16 md:py-24 lg:flex-row lg:py-28">
+      <div className="fixed inset-0 top-0 -z-50 items-center px-5 py-24 [background:radial-gradient(125%_125%_at_30%_10%,#000_40%,#5C2AF4_100%)]" />
       <div className="flex-1 pb-12">
         <div className="mb-6 flex flex-col lg:mb-8">
           <span className="text-regular-normal mb-3 block lg:mb-4">
