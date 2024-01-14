@@ -2,7 +2,6 @@ import Content from 'components/content';
 import CTA from 'components/cta';
 import Header from 'components/header';
 import PortfolioHeader from 'components/portfolio-header';
-import Heading from 'components/ui/heading';
 import React, { FC } from 'react';
 
 const Project: FC = () => {
@@ -33,10 +32,7 @@ const Project: FC = () => {
           'Accessibility',
         ]}
       />
-      <Content>
-        <Heading headingLevel="h2" className="text-heading-3 w-full">
-          Boosting Online Visibility: A Boat & Crane Service Website Revamp
-        </Heading>
+      <Content title="Boosting Online Visibility: A Boat & Crane Service Website Revamp">
         <div className="flex flex-col gap-6 md:gap-8 lg:min-w-[55%]">
           <p className="text-regular-normal max-w-prose md:text-medium-normal">
             A longstanding comprehensive boat docking, storage, and maintenance
@@ -59,10 +55,7 @@ const Project: FC = () => {
           </p>
         </div>
       </Content>
-      <Content>
-        <Heading headingLevel="h2" className="text-heading-3 w-full">
-          Process & Strategy
-        </Heading>
+      <Content title="Process & Strategy">
         <div className="flex flex-col gap-6 md:gap-8 lg:min-w-[55%]">
           <p className="text-regular-normal max-w-prose md:text-medium-normal">
             <strong>Understanding the Business:</strong> While I was given
@@ -88,10 +81,7 @@ const Project: FC = () => {
           </p>
         </div>
       </Content>
-      <Content>
-        <Heading headingLevel="h2" className="text-heading-3 w-full">
-          Results
-        </Heading>
+      <Content title="Results">
         <div className="flex flex-col gap-6 md:gap-8 lg:min-w-[55%]">
           <p className="text-regular-normal max-w-prose md:text-medium-normal">
             The website renewal led to tangible positive outcomes for the
@@ -105,10 +95,7 @@ const Project: FC = () => {
           </p>
         </div>
       </Content>
-      <Content>
-        <Heading headingLevel="h2" className="text-heading-3 w-full">
-          Conclusion
-        </Heading>
+      <Content title="Conclusion">
         <div className="flex flex-col gap-6 md:gap-8 lg:min-w-[55%]">
           <p className="text-regular-normal max-w-prose md:text-medium-normal">
             This project underscores the importance of a well-structured, clear,

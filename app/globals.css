@@ -21,8 +21,7 @@
     position: fixed;
     width: 150%;
     height: 150%;
-    background: #050505;
-    z-index: -100;
+    z-index: -40;
   }
 
   .bg-grain:after {

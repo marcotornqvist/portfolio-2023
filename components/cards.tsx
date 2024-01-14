@@ -27,6 +27,7 @@ const Cards: FC<CardsProps> = ({ className }) => (
       }
       title="Full-stack"
       text="Expertise in full-stack development, with a strong emphasis on creating responsive and user-friendly frontend interfaces, end-to-end testing, accessibility, and robust backend systems."
+      className="delay-800 lg:delay-100"
     />
     <Card
       icon={
@@ -41,6 +42,7 @@ const Cards: FC<CardsProps> = ({ className }) => (
       }
       title="Web Design"
       text="Proficient in web design, focusing on crafting intuitive and visually appealing user interfaces. Expertise in utilizing leading design tools to bring creative visions to life."
+      className="delay-1100 lg:delay-300"
     />
     <Card
       icon={
@@ -55,6 +57,7 @@ const Cards: FC<CardsProps> = ({ className }) => (
       }
       title="Tools"
       text="Skilled in leveraging cloud platforms, CI/CD pipelines and version control systems for efficient project deployment and management."
+      className="delay-1400 lg:delay-500"
     />
   </div>
 );
@@ -70,7 +73,7 @@ const Card: FC<CardProps> = ({ icon, title, text, className }) => {
   return (
     <div
       className={cn(
-        'flex w-full flex-col gap-4 rounded-md bg-purple p-6 pb-10 md:pb-18 md:pt-8 xl:px-8 xl:pb-[72px]',
+        'flex w-full animate-fade-in flex-col gap-4 rounded-md bg-purple p-6 pb-10 opacity-0 md:pb-16 md:pt-8 xl:px-8 xl:pb-[72px]',
         className,
       )}
     >

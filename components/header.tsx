@@ -1,3 +1,5 @@
+'use client';
+
 import React, { FC } from 'react';
 import Heading, { HeadingLevel } from './ui/heading';
 import { cn } from 'lib/utils';
@@ -5,6 +7,7 @@ import clsx from 'clsx';
 import { buttonVariants } from './ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
+import useIsVisible from 'hooks/useIsVisible';
 
 type Props = {
   title: string;
@@ -23,6 +26,7 @@ const Header: FC<Props> = ({
   buttonLink,
   className,
 }) => {
+  const [isVisible, domRef] = useIsVisible<HTMLDivElement>();
   const buttonExists = buttonText && buttonLink;
 
   return (
@@ -41,30 +45,45 @@ const Header: FC<Props> = ({
             ? 'flex flex-col gap-5 lg:gap-2'
             : 'flex min-w-full flex-col gap-5 lg:flex-row lg:items-center lg:gap-[5%]',
         )}
+        ref={domRef}
       >
         <Heading
           headingLevel={headingLevel}
-          className={clsx('text-heading-1', !buttonExists && 'lg:w-[50%]')}
+          className={clsx(
+            'text-heading-1 opacity-0',
+            !buttonExists && 'lg:w-[50%]',
+            isVisible && 'animate-fade-in',
+          )}
         >
           {title}
         </Heading>
         <p
           className={clsx(
-            'text-regular-normal max-w-prose md:text-medium-normal',
+            'text-regular-normal max-w-prose opacity-0 md:text-medium-normal',
             !buttonExists && 'lg:w-[50%]',
+            isVisible && 'animate-fade-in',
           )}
         >
           {subtitle}
         </p>
       </div>
       {buttonExists && (
-        <Link className={buttonVariants()} href={buttonLink} target="_blank">
+        <Link
+          className={clsx(
+            buttonVariants(),
+            'opacity-0 delay-300',
+            isVisible && 'animate-fade-in',
+          )}
+          href={buttonLink}
+          target="_blank"
+        >
           {buttonText}
           <Image
             src="/assets/icons/arrow-right.svg"
             alt="Arrow right"
             width={20}
             height={10}
+            className="animate-slide-in-left delay-900 -translate-x-[10px] transform opacity-0"
             aria-hidden
           />
         </Link>
