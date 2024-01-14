@@ -38,78 +38,97 @@ const config: Config = {
       lg: '12px',
       full: '9999px',
     },
+    animation: {
+      'fade-in-fast': 'fade-in 0.3s ease-in-out forwards',
+      'fade-in': 'fade-in 0.6s ease-in-out forwards',
+      'fade-in-up': 'fade-in-up 0.6s ease-in-out forwards',
+      'scale-in': 'scale-in 0.6s cubic-bezier(0.20, 1, 0.4, 1) forwards',
+      'slide-in-left':
+        'slide-in-left 0.6s cubic-bezier(0.20, 1, 0.4, 1) forwards',
+
+      //   fadeUp: 'fadeUp 200ms forwards',
+      //   fadeUpSlow: 'fadeUp 500ms forwards',
+      //   fadeIn: 'fadeIn 200ms forwards',
+      //   fadeInSlow: 'fadeIn 500ms forwards',
+      //   fadeOut: 'fadeOut 200ms forwards',
+      //   scaleIn: 'scaleIn 500ms forwards cubic-bezier(0.16, 1, 0.3, 1)',
+      //   menuShow: 'menuShow 300ms',
+      //   menuHide: 'menuHide 300ms',
+      //   navbarShow: 'navbarShow 200ms forwards',
+      //   navbarHide: 'navbarHide 200ms forwards',
+      //   dropdownShow: 'dropdownShow 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+      //   dropdownHide: 'dropdownHide 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+      //   slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+      //   slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+    },
     keyframes: {
-      fadeUp: {
-        from: { transform: 'translateY(24px)', opacity: '0' },
-        to: { transform: 'translateY(0)', opacity: '1' },
+      'fade-in': {
+        '0%': {
+          opacity: '0',
+        },
+        '100%': {
+          opacity: '1',
+        },
       },
-      fadeIn: {
-        from: { opacity: '0' },
-        to: { opacity: '1' },
+      'fade-in-up': {
+        '0%': {
+          opacity: '0',
+          transform: 'translateY(24px)',
+        },
+        '100%': {
+          opacity: '1',
+          transform: 'translateY(0)',
+        },
       },
-      fadeOut: {
-        from: { opacity: '1' },
-        to: { opacity: '0' },
+      'scale-in': {
+        '0%': {
+          opacity: '0',
+          transform: 'scale(0.93)',
+        },
+        '100%': {
+          opacity: '1',
+          transform: 'scale(1)',
+        },
       },
-      scaleIn: {
-        from: { opacity: '0', transform: 'scale(1.15)' },
-        to: { opacity: '1', transform: 'scale(1)' },
-      },
-      // navbarShow: {
-      //   from: { transform: 'translateY(-80px)' },
-      //   to: { transform: 'translateY(0)' },
-      // },
-      // navbarHide: {
-      //   from: { transform: 'translateY(0)' },
-      //   to: { transform: 'translateY(-80px)' },
-      // },
-      // menuShow: {
-      //   from: { opacity: '0', transform: 'translateY(100%)' },
-      //   to: { opacity: '1', transform: 'translateY(0)' },
-      // },
-      // menuHide: {
-      //   from: { opacity: '1', transform: 'translateY(0)' },
-      //   to: { opacity: '0', transform: 'translateY(100%)' },
-      // },
-      dropdownShow: {
-        from: { opacity: '0', transform: 'translateY(-2px)' },
-        to: { opacity: '1', transform: 'translateY(0)' },
-      },
-      dropdownHide: {
-        from: { opacity: '1', transform: 'translateY(0)' },
-        to: { opacity: '0', transform: 'translateY(-2px)' },
-      },
-      slideDown: {
-        from: { height: '0' },
-        to: { height: 'var(--radix-accordion-content-height)' },
-      },
-      slideUp: {
-        from: { height: 'var(--radix-accordion-content-height)' },
-        to: { height: '0' },
+      'slide-in-left': {
+        '0%': {
+          opacity: '0',
+          transform: 'translateX(-10px)',
+        },
+        '100%': {
+          opacity: '1',
+          transform: 'translateX(0)',
+        },
       },
     },
-    // animation: {
-    //   fadeUp: 'fadeUp 200ms forwards',
-    //   fadeUpSlow: 'fadeUp 500ms forwards',
-    //   fadeIn: 'fadeIn 200ms forwards',
-    //   fadeInSlow: 'fadeIn 500ms forwards',
-    //   fadeOut: 'fadeOut 200ms forwards',
-    //   scaleIn: 'scaleIn 500ms forwards cubic-bezier(0.16, 1, 0.3, 1)',
-    //   menuShow: 'menuShow 300ms',
-    //   menuHide: 'menuHide 300ms',
-    //   navbarShow: 'navbarShow 200ms forwards',
-    //   navbarHide: 'navbarHide 200ms forwards',
-    //   dropdownShow: 'dropdownShow 200ms cubic-bezier(0.16, 1, 0.3, 1)',
-    //   dropdownHide: 'dropdownHide 200ms cubic-bezier(0.16, 1, 0.3, 1)',
-    //   slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
-    //   slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
-    // },
     extend: {
       height: {
         18: '4.5rem',
       },
       padding: {
         18: '4.5rem',
+      },
+      transitionDelay: {
+        '100': '100ms',
+        '200': '200ms',
+        '300': '300ms',
+        '400': '400ms',
+        '500': '500ms',
+        '600': '600ms',
+        '700': '700ms',
+        '800': '800ms',
+        '900': '900ms',
+        '1000': '1000ms',
+        '1100': '1100ms',
+        '1200': '1200ms',
+        '1300': '1300ms',
+        '1400': '1400ms',
+        '1500': '1500ms',
+        '1600': '1600ms',
+        '1700': '1700ms',
+        '1800': '1800ms',
+        '1900': '1900ms',
+        '2000': '2000ms',
       },
       gradientColorStops: (theme) => ({
         transparent: 'rgba(255, 255, 255, 0)',

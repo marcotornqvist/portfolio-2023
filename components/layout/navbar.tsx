@@ -26,7 +26,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex h-16 items-center md:h-18">
+    <nav className="flex h-16 animate-fade-in items-center opacity-0 md:h-18">
       <div className="container flex items-center justify-between">
         <Link
           href="/"

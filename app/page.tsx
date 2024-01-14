@@ -6,7 +6,7 @@ import Link from 'next/link';
 import CTA from 'components/cta';
 import PortfolioHeader from 'components/portfolio-header';
 
-const Home = ({}) => {
+const Home = () => {
   return (
     <>
       <Hero
@@ -31,7 +31,6 @@ const Home = ({}) => {
             </Link>
           </>
         }
-        // subtitle="A straightforward look into some projects that best represent my capabilities in web design and development. For those interested in the more technical aspects, I encourage you to visit my GitHub."
         headingLevel="h2"
       />
       <PortfolioHeader
@@ -40,6 +39,7 @@ const Home = ({}) => {
         headingLevel="h3"
         buttonLink="/projects/eke-marin"
         buttonText="View Project"
+        imageClassName="md:delay-400"
       />
       <CTA
         title="Behind the Pixels"
