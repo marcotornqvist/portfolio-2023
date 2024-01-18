@@ -16,7 +16,7 @@ const Project: FC = () => {
           </>
         }
         buttonText="Live Site"
-        buttonLink="https://eke-marin.fi/"
+        buttonLink="https://eke-marin.fi/en"
         headingLevel="h1"
         className="py-16 md:py-24 lg:py-28"
       />

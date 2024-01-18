@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { siteConfig } from 'config/site';
 import clsx from 'clsx';
+import GithubIcon from 'components/icons/github';
+import LinkedinIcon from 'components/icons/linkedin';
 
 const Footer = () => {
   return (
@@ -17,25 +19,14 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src="/assets/icons/github.svg"
-                  alt="GitHub"
-                  width={32}
-                  height={32}
-                />
+                <GithubIcon />
               </Link>
               <Link
                 href={siteConfig.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src="/assets/icons/linkedin.svg"
-                  alt="LinkedIn"
-                  width={32}
-                  height={32}
-                  className="!fill-purple"
-                />
+                <LinkedinIcon className="!fill-purple" />
               </Link>
             </div>
             <div className="flex items-center lg:order-1">

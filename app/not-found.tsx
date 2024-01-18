@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { FC } from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
+import ArrowIcon from 'components/icons/arrow';
 
 const NotFound: FC = () => {
   return (
@@ -19,12 +20,8 @@ const NotFound: FC = () => {
         </div>
         <Link href="/" className={buttonVariants()}>
           Go back home
-          <Image
-            src="/assets/icons/arrow-right.svg"
-            alt="Arrow right"
-            width={20}
-            height={10}
-            className="animate-slide-in-left delay-900 -translate-x-[10px] transform opacity-0"
+          <ArrowIcon
+            className="-translate-x-[10px] transform animate-slide-in-left opacity-0 delay-900"
             aria-hidden
           />
         </Link>
