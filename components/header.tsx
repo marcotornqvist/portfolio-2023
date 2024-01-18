@@ -6,8 +6,8 @@ import { cn } from 'lib/utils';
 import clsx from 'clsx';
 import { buttonVariants } from './ui/button';
 import Link from 'next/link';
-import Image from 'next/image';
 import useIsVisible from 'hooks/useIsVisible';
+import ArrowIcon from './icons/arrow';
 
 type Props = {
   title: string;
@@ -78,12 +78,8 @@ const Header: FC<Props> = ({
           target="_blank"
         >
           {buttonText}
-          <Image
-            src="/assets/icons/arrow-right.svg"
-            alt="Arrow right"
-            width={20}
-            height={10}
-            className="animate-slide-in-left delay-900 -translate-x-[10px] transform opacity-0"
+          <ArrowIcon
+            className="-translate-x-[10px] transform animate-slide-in-left opacity-0 delay-900"
             aria-hidden
           />
         </Link>

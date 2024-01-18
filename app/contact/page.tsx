@@ -1,15 +1,17 @@
 import ContactForm from 'components/contact-form';
 import React, { FC } from 'react';
-import Image from 'next/image';
 import clsx from 'clsx';
 import RecaptachaProvider from 'components/recaptcha-provider';
+import InboxIcon from 'components/icons/inbox';
+import PhoneIcon from 'components/icons/phone';
+import MapIcon from 'components/icons/map';
 
 const Contact: FC = () => {
   const styles = clsx('flex items-center gap-3');
 
   return (
     <div className="container flex flex-col gap-[5%] py-16 md:py-24 lg:flex-row lg:py-28">
-      <div className="animate-fade-in fixed inset-0 top-0 -z-50 items-center px-5 py-24 opacity-0 [background:radial-gradient(125%_125%_at_30%_10%,#000_40%,#5C2AF4_100%)]" />
+      <div className="fixed inset-0 top-0 -z-50 animate-fade-in items-center px-5 py-24 opacity-0 [background:radial-gradient(125%_125%_at_30%_10%,#000_40%,#5C2AF4_100%)]" />
       <div className="flex-1 pb-12">
         <div className="mb-6 flex flex-col lg:mb-8">
           <span className="text-regular-normal mb-3 block lg:mb-4">
@@ -25,14 +27,8 @@ const Contact: FC = () => {
           <ul className="flex flex-col gap-4">
             <li>
               <a href="mailto:marcotornqvist@gmail.com" className={styles}>
-                <div className="flex h-6 w-6">
-                  <Image
-                    src="/assets/icons/inbox.svg"
-                    alt="mailbox icon"
-                    height={16}
-                    width={20}
-                    aria-hidden
-                  />
+                <div className="flex h-6 w-6 items-center justify-center">
+                  <InboxIcon aria-hidden />
                 </div>
                 <span className="text-regular-normal">
                   marcotornqvist@gmail.com
@@ -41,28 +37,16 @@ const Contact: FC = () => {
             </li>
             <li>
               <a href="tel:+358440223519" className={styles}>
-                <div className="flex h-6 w-6">
-                  <Image
-                    src="/assets/icons/phone.svg"
-                    alt="phone icon"
-                    height={19}
-                    width={19}
-                    aria-hidden
-                  />
+                <div className="flex h-6 w-6 items-center justify-center">
+                  <PhoneIcon aria-hidden />
                 </div>
                 <span className="text-regular-normal">+358 440 223 519</span>
               </a>
             </li>
             <li>
               <div className={styles}>
-                <div className="flex h-6 w-6">
-                  <Image
-                    src="/assets/icons/map.svg"
-                    alt="map icon"
-                    height={20}
-                    width={16}
-                    aria-hidden
-                  />
+                <div className="flex h-6 w-6 items-center justify-center">
+                  <MapIcon aria-hidden />
                 </div>
                 <span className="text-regular-normal">Southern Finland</span>
               </div>

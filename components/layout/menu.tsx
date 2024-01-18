@@ -13,7 +13,7 @@ import {
 import { links } from './navbar';
 import { cn } from 'lib/utils';
 import { usePathname } from 'next/navigation';
-import Image from 'next/image';
+import ArrowIcon from 'components/icons/arrow';
 
 type MenuProps = {
   btnClassName?: string;
@@ -49,13 +49,7 @@ const Menu: FC<MenuProps> = ({ btnClassName }) => {
       <SheetContent className="md:hidden">
         <SheetHeader className="px-2 pt-6">
           <SheetClose className="-ml-4 px-4 py-4">
-            <Image
-              src="/assets/icons/arrow-right.svg"
-              alt="Arrow left"
-              width={24}
-              height={12}
-              className="rotate-180"
-            />
+            <ArrowIcon className="rotate-180" />
           </SheetClose>
         </SheetHeader>
         <ul className="-ml-4 flex h-full flex-col gap-2 px-2 pt-24">

@@ -10,6 +10,7 @@ import Image from 'next/image';
 import Tag from './ui/tag';
 import clsx from 'clsx';
 import useIsVisible from 'hooks/useIsVisible';
+import ArrowIcon from './icons/arrow';
 
 type Props = {
   title?: string;
@@ -124,13 +125,9 @@ const BottomContent: FC<BottomContentProps> = ({
               )}
             >
               {buttonText}
-              <Image
-                src="/assets/icons/arrow-right.svg"
-                alt="Arrow right"
-                width={20}
-                height={10}
+              <ArrowIcon
                 aria-hidden
-                className="animate-slide-in-left delay-900 -translate-x-[10px] transform opacity-0"
+                className="-translate-x-[10px] transform animate-slide-in-left opacity-0 delay-900"
               />
             </Link>
           )}

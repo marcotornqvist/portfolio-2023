@@ -8,6 +8,7 @@ import Heading, { HeadingLevel } from './ui/heading';
 import { buttonVariants } from './ui/button';
 import useIsVisible from 'hooks/useIsVisible';
 import clsx from 'clsx';
+import ArrowIcon from './icons/arrow';
 
 type Props = {
   image?: string;
@@ -92,11 +93,7 @@ const CTA: FC<Props> = ({
           >
             <Link href={buttonLink} className={buttonVariants()}>
               {buttonText}
-              <Image
-                src="/assets/icons/arrow-right.svg"
-                alt="Arrow right"
-                width={20}
-                height={10}
+              <ArrowIcon
                 className={clsx(
                   '-translate-x-[10px] transform opacity-0',
                   isVisible && 'animate-slide-in-left',
