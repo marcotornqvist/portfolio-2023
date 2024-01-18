@@ -1,6 +1,5 @@
 import ContactForm from 'components/contact-form';
 import React, { FC } from 'react';
-import Image from 'next/image';
 import clsx from 'clsx';
 import RecaptachaProvider from 'components/recaptcha-provider';
 import InboxIcon from 'components/icons/inbox';

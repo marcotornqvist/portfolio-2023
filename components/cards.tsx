@@ -1,6 +1,5 @@
 import { cn } from 'lib/utils';
 import React, { FC, ReactNode } from 'react';
-import Image from 'next/image';
 import clsx from 'clsx';
 import CodeIcon from './icons/code';
 import BrushIcon from './icons/brush';

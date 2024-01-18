@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { siteConfig } from 'config/site';
 import clsx from 'clsx';
 import GithubIcon from 'components/icons/github';

@@ -6,7 +6,6 @@ import { cn } from 'lib/utils';
 import clsx from 'clsx';
 import { buttonVariants } from './ui/button';
 import Link from 'next/link';
-import Image from 'next/image';
 import useIsVisible from 'hooks/useIsVisible';
 import ArrowIcon from './icons/arrow';
 

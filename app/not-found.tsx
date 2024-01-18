@@ -1,7 +1,6 @@
 import { buttonVariants } from 'components/ui/button';
 import Link from 'next/link';
 import React, { FC } from 'react';
-import Image from 'next/image';
 import clsx from 'clsx';
 import ArrowIcon from 'components/icons/arrow';
 

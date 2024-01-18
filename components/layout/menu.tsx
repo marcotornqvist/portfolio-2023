@@ -13,7 +13,6 @@ import {
 import { links } from './navbar';
 import { cn } from 'lib/utils';
 import { usePathname } from 'next/navigation';
-import Image from 'next/image';
 import ArrowIcon from 'components/icons/arrow';
 
 type MenuProps = {
