@@ -1,51 +1,39 @@
 import type { Metadata } from 'next';
-import { Lora, Merriweather } from 'next/font/google';
-import './globals.css';
-import { FC } from 'react';
+import type { ReactNode } from 'react';
+import { Geist } from 'next/font/google';
 import Navbar from 'components/layout/navbar';
 import Footer from 'components/layout/footer';
 import { siteConfig } from 'config/site';
+import './globals.css';
 
-const lora = Lora({
+const geist = Geist({
   subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-lora',
-  display: 'auto',
-});
-
-const merriweather = Merriweather({
-  weight: ['400'],
-  variable: '--font-merriweather',
-  subsets: ['latin'],
+  variable: '--font-geist',
   display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Portfolio`,
-  description: 'Software Developer & Web Designer',
-  icons: {
-    icon: '/favicon.png',
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: `${siteConfig.name} — Software Developer`,
+    template: `%s — ${siteConfig.name}`,
   },
+  description:
+    'Software developer and web designer based in Finland. Thoughtful interfaces, purposeful code, and a selection of digital projects by Marco Törnqvist.',
+  openGraph: { type: 'website', locale: 'en_GB', siteName: siteConfig.name },
 };
 
-const RootLayout: FC<{
-  children: React.ReactNode;
-}> = ({ children }) => {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html
-      className={`${lora.className} ${merriweather.variable} [&>.grecaptcha-badge]:invisible`}
-      lang="en"
-    >
-      <body className="bg-[#050505]" suppressHydrationWarning>
-        <div className="bg-grain" />
+    <html lang="en" className={geist.variable}>
+      <body id="top">
+        <a className="skip-link" href="#main-content">
+          Skip to content
+        </a>
         <Navbar />
-        <main className="flex min-h-[calc(100svh-3.5rem)] flex-col items-center md:min-h-[calc(100svh-4.5rem)]">
-          {children}
-        </main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}

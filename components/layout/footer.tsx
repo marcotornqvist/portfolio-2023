@@ -1,67 +1,53 @@
-'use client';
-
-import Link from 'next/link';
 import { siteConfig } from 'config/site';
-import clsx from 'clsx';
-import GithubIcon from 'components/icons/github';
-import LinkedinIcon from 'components/icons/linkedin';
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="py-12 lg:py-20">
-      <div className="container mx-auto">
-        <div className="flex flex-col items-center gap-6 border-t border-b-lightgrey pt-8 lg:flex-row lg:justify-between">
-          <div className="flex flex-col justify-center gap-6 lg:order-3 lg:flex-row lg:gap-4">
-            <div className="flex w-full items-center justify-center gap-6 lg:order-2">
-              <Link
-                href={siteConfig.socials.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GithubIcon />
-              </Link>
-              <Link
+    <footer id="contact" className="site-footer" aria-labelledby="contact-heading">
+      <div className="page-width">
+        <div className="footer-main">
+          <div>
+            <p className="eyebrow">Have something in mind?</p>
+            <h2 id="contact-heading">
+              Let’s make
+              <br />
+              something good.
+            </h2>
+            <p>For a project, a question, or just a hello.</p>
+          </div>
+          <address className="contact-details">
+            <a className="email-link" href={`mailto:${siteConfig.email}`}>
+              {siteConfig.email} <span aria-hidden="true">↗</span>
+            </a>
+            <a href={`tel:${siteConfig.phone}`}>{siteConfig.phoneDisplay}</a>
+            <span>{siteConfig.location}</span>
+            <div className="social-links">
+              <a
                 href={siteConfig.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <LinkedinIcon className="!fill-purple" />
-              </Link>
-            </div>
-            <div className="flex items-center lg:order-1">
-              <Link
-                href="/projects"
-                className={clsx(
-                  'text-regular-normal px-3 py-2 lg:px-4',
-                  // pathname === '/projects' && '!text-white',
-                )}
+                LinkedIn <span aria-hidden="true">↗</span>
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+              <a
+                href={siteConfig.socials.github}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Projects
-              </Link>
-              <Link
-                href="/contact"
-                className={clsx(
-                  'text-regular-normal px-3 py-2 lg:px-4',
-                  // pathname === '/projects' && '!text-white',
-                )}
-              >
-                Contact
-              </Link>
+                GitHub <span aria-hidden="true">↗</span>
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
             </div>
-          </div>
-          <Link
-            href="mailto:marcotornqvist@gmail.com"
-            className="text-small-normal xl:text-regular-normal lg:order-1"
-          >
-            marcotornqvist@gmail.com
-          </Link>
-          <span className="text-small-normal xl:text-regular-normal lg:order-2">
-            © 2023 Marco Törnqvist. All rights reserved.
+          </address>
+        </div>
+        <div className="footer-bottom">
+          <span>
+            © {new Date().getFullYear()} {siteConfig.name}
           </span>
+          <span>Designed with care. Built with purpose.</span>
+          <a href="#top">Back to top ↑</a>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

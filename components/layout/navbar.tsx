@@ -1,63 +1,41 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import clsx from 'clsx';
-import Menu from 'components/layout/menu';
-import { siteConfig } from 'config/site';
 
-export const links = [
-  { href: '/projects', text: 'Projects' },
-  { href: '/contact', text: 'Contact' },
-  {
-    href: siteConfig.socials.linkedin,
-    text: 'LinkedIn',
-    isExternal: true,
-  },
-  {
-    href: siteConfig.socials.github,
-    text: 'Github',
-    isExternal: true,
-  },
-];
-
-const Navbar = () => {
+export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex h-16 animate-fade-in items-center opacity-0 md:h-18">
-      <div className="container flex items-center justify-between">
-        <Link
-          href="/"
-          className="text-heading-6 -ml-4 px-4 py-2 text-white"
-          aria-current={pathname === '/' ? 'page' : undefined}
-        >
-          Marco Törnqvist
-        </Link>
-        <div className="md:hidden">
-          <Menu />
-        </div>
-        <ul className="-mr-4 hidden flex-row md:flex">
-          {links.map((link, index) => (
-            <li key={index}>
-              <Link
-                href={link.href}
-                target={link.isExternal ? '_blank' : undefined}
-                className={clsx(
-                  ' text-regular-normal px-4 py-2 text-grey',
-                  pathname === link.href && '!text-white',
-                )}
-                aria-current={pathname === link.href ? 'page' : undefined}
-              >
-                {link.text}
-              </Link>
-            </li>
-          ))}
+    <header className="site-header page-width">
+      <Link href="/" className="brand" aria-label="Marco Törnqvist — home">
+        <span className="monogram" aria-hidden="true">
+          mt.
+        </span>
+        <span className="brand-name">Marco Törnqvist</span>
+      </Link>
+      <nav aria-label="Main navigation">
+        <ul className="nav-links">
+          <li>
+            <Link href="/" aria-current={pathname === '/' ? 'page' : undefined}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/projects"
+              aria-current={pathname === '/projects' ? 'page' : undefined}
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <a href="#contact">
+              Contact <span aria-hidden="true">↗</span>
+            </a>
+          </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
-};
-
-export default Navbar;
+}

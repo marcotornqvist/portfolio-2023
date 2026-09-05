@@ -1,19 +1,10 @@
-export type SiteConfig = {
-  name: string;
-  url: string;
-  socials: {
-    linkedin: string;
-    github: string;
-  };
-  // ogImage: string;
-};
-
-export const siteConfig: SiteConfig = {
+export const siteConfig = {
   name: 'Marco Törnqvist',
-  url:
-    process.env.NODE_ENV === 'production'
-      ? 'https://www.marcotornqvist.com/'
-      : 'http://localhost:3000',
+  url: 'https://www.marcotornqvist.com',
+  email: 'marcotornqvist@gmail.com',
+  phone: '+358440223519',
+  phoneDisplay: '+358 440 223 519',
+  location: 'Finland, Remote',
   socials: {
     linkedin: 'https://www.linkedin.com/in/marco-t%C3%B6rnqvist-2b6211129/',
     github: 'https://github.com/marcotornqvist',
