@@ -1,4 +1,5 @@
 import { siteConfig } from 'config/site';
+import ArrowIcon from 'components/arrow-icon';
 
 export default function Footer() {
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
           </div>
           <address className="contact-details">
             <a className="email-link" href={`mailto:${siteConfig.email}`}>
-              {siteConfig.email} <span aria-hidden="true">↗</span>
+              {siteConfig.email} <span aria-hidden="true"><ArrowIcon /></span>
             </a>
             <a href={`tel:${siteConfig.phone}`}>{siteConfig.phoneDisplay}</a>
             <span>{siteConfig.location}</span>
@@ -26,7 +27,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                LinkedIn <span aria-hidden="true">↗</span>
+                LinkedIn <span aria-hidden="true"><ArrowIcon /></span>
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
               <a
@@ -34,7 +35,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                GitHub <span aria-hidden="true">↗</span>
+                GitHub <span aria-hidden="true"><ArrowIcon /></span>
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </div>
@@ -44,8 +45,7 @@ export default function Footer() {
           <span>
             © {new Date().getFullYear()} {siteConfig.name}
           </span>
-          <span>Designed with care. Built with purpose.</span>
-          <a href="#top">Back to top ↑</a>
+          <a href="#top">Back to top <ArrowIcon direction="up" /></a>
         </div>
       </div>
     </footer>

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import ArrowIcon from 'components/arrow-icon';
 import ProjectCard from 'components/project-card';
 import ResumeList from 'components/resume-list';
 import { education, experience, projects } from 'config/portfolio';
@@ -13,9 +14,7 @@ export default function Home() {
             <span className="status-dot" /> Software developer
           </p>
           <h1 id="intro-heading">
-            Thoughtful design.
-            <br />
-            <span>Purposeful code.</span>
+            <span>Marco Törnqvist</span>
           </h1>
           <p className="intro">
             Hi, I’m Marco. I build considered digital experiences that help people
@@ -24,10 +23,10 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <Link href="/projects" className="button-link">
-              Explore my work <span aria-hidden="true">↗</span>
+              Explore my work <span aria-hidden="true"><ArrowIcon /></span>
             </Link>
             <a href="#contact" className="text-link">
-              Get in touch <span aria-hidden="true">↗</span>
+              Get in touch <span aria-hidden="true"><ArrowIcon /></span>
             </a>
           </div>
         </div>
@@ -56,7 +55,7 @@ export default function Home() {
             <h2 id="work-heading">A few things I’ve worked on.</h2>
           </div>
           <Link className="text-link" href="/projects">
-            All projects <span aria-hidden="true">↗</span>
+            All projects <span aria-hidden="true"><ArrowIcon /></span>
           </Link>
         </div>
         <div className="project-grid">

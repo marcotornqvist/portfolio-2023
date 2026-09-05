@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import ArrowIcon from 'components/arrow-icon';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -31,7 +32,7 @@ export default function Navbar() {
           </li>
           <li>
             <a href="#contact">
-              Contact <span aria-hidden="true">↗</span>
+              Contact
             </a>
           </li>
         </ul>

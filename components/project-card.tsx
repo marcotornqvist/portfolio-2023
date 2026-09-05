@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ArrowIcon from 'components/arrow-icon';
 import type { Project } from 'config/portfolio';
 
 export default function ProjectCard({
@@ -27,7 +28,7 @@ export default function ProjectCard({
                 <i />
               </span>
               <span>{new URL(project.url).hostname.replace('www.', '')}</span>
-              <span>↗</span>
+              <span><ArrowIcon /></span>
             </div>
             <Image
               src={project.image}
@@ -43,13 +44,13 @@ export default function ProjectCard({
               {String(index + 1).padStart(2, '0')} / {project.category}
             </span>
             <span className="project-arrow" aria-hidden="true">
-              ↗
+              <ArrowIcon />
             </span>
           </div>
           <Heading className="project-title">{project.title}</Heading>
           <p>{project.description}</p>
           <span className="visit-link">
-            Visit website <span aria-hidden="true">↗</span>
+            Visit website <span aria-hidden="true"><ArrowIcon /></span>
             <span className="sr-only"> (opens in a new tab)</span>
           </span>
         </div>

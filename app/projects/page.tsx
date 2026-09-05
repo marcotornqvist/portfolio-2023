@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ArrowIcon from 'components/arrow-icon';
 import ProjectCard from 'components/project-card';
 import { projects } from 'config/portfolio';
 import { siteConfig } from 'config/site';
@@ -39,7 +40,7 @@ export default function Projects() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Find me on GitHub <span aria-hidden="true">↗</span>
+          Find me on GitHub <span aria-hidden="true"><ArrowIcon /></span>
           <span className="sr-only"> (opens in a new tab)</span>
         </a>
       </p>
