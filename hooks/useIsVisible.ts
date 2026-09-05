@@ -2,7 +2,10 @@
 
 import { useState, useEffect, useRef, RefObject } from 'react';
 
-const useIsVisible = <T extends HTMLElement>(): [boolean, RefObject<T>] => {
+const useIsVisible = <T extends HTMLElement>(): [
+  boolean,
+  RefObject<T | null>,
+] => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const domRef = useRef<T>(null);
 

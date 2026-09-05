@@ -11,7 +11,7 @@ import ArrowIcon from './icons/arrow';
 
 type Props = {
   title: string;
-  subtitle: JSX.Element;
+  subtitle: React.JSX.Element;
   headingLevel: HeadingLevel;
   buttonText?: string;
   buttonLink?: string;
