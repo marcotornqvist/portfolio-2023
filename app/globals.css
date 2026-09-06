@@ -274,16 +274,77 @@ h1 span {
   transform: rotate(3deg);
 }
 
+@property --portrait-border-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
 .portrait-image {
+  position: relative;
   border-radius: 120px 120px 8px 8px;
   overflow: hidden;
   background: #e3e7df;
   aspect-ratio: 0.88;
+  animation: portrait-glow 5s ease-in-out infinite;
+}
+
+.portrait-image::before,
+.portrait-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(145deg, #d9e5cb 5%, #9bb594 35%, var(--green) 65%, #bdcebb 100%);
+  pointer-events: none;
+}
+
+.portrait-image::after {
+  background: conic-gradient(
+    from var(--portrait-border-angle),
+    var(--green) 0deg,
+    #9bb594 200deg,
+    #d9e5cb 270deg,
+    var(--paper) 310deg,
+    #9bb594 335deg,
+    var(--green) 360deg
+  );
+  opacity: 0;
+  animation: portrait-border-orbit 2s linear both;
+}
+
+@keyframes portrait-border-orbit {
+  0% {
+    --portrait-border-angle: 0deg;
+    opacity: 0;
+  }
+  12%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    --portrait-border-angle: 360deg;
+    opacity: 0;
+  }
+}
+
+@keyframes portrait-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 #9bb59400, 0 0 0 0 #bdcebb00;
+  }
+  50% {
+    box-shadow: 0 0 16px 3px #9bb59470, 0 0 36px 7px #bdcebb50;
+  }
 }
 
 .portrait-image img {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  z-index: 1;
+  inset: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border-radius: 117px 117px 5px 5px;
   object-fit: cover;
   object-position: center;
 }
