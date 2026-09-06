@@ -54,7 +54,8 @@ export const projects: Project[] = [
 
 export type ResumeEntry = {
   organization: string;
-  title: string;
+  title?: string;
+  description?: string;
   start: string;
   end: string;
   location?: string;
@@ -67,13 +68,16 @@ export const experience: ResumeEntry[] = [
     start: 'Nov 2025',
     end: 'Present',
     location: 'Finland · Full-time',
+    description:
+      'Building an AI-powered platform that turns property photos into engaging real estate videos, making professional video creation faster and more accessible.',
   },
   {
-    organization: 'Freelance',
-    title: 'Freelance Software Developer',
+    organization: 'Freelance Software Developer',
     start: 'Jan 2023',
     end: 'Present',
     location: 'Finland · Remote',
+    description:
+      'Designing and developing accessible websites, from smaller client projects to supporting work for publicly listed companies.',
   },
   {
     organization: 'Vincit',
@@ -81,6 +85,8 @@ export const experience: ResumeEntry[] = [
     start: 'Apr 2022',
     end: 'Nov 2025',
     location: 'Helsinki, Finland · Full-time',
+    description:
+      'Built public-sector services and e-commerce experiences using Next.js, TypeScript, GraphQL, Mapbox, and headless CMS platforms. I also collaborated closely with clients and conducted technical interviews for engineering roles.',
   },
   {
     organization: 'Finnish Defence Forces',
@@ -88,6 +94,8 @@ export const experience: ResumeEntry[] = [
     start: 'Aug 2019',
     end: 'Mar 2020',
     location: 'Raseborg, Finland',
+    description:
+      'Developed React web applications that supported virtual teaching and learning within the Finnish Defence Forces.',
   },
 ];
 
@@ -97,5 +105,7 @@ export const education: ResumeEntry[] = [
     title: 'Bachelor of Engineering, Information Technology',
     start: '2018',
     end: '2022',
+    description:
+      'Built a foundation in software engineering with a focus on machine learning, web development, data analytics, and entrepreneurship.',
   },
 ];

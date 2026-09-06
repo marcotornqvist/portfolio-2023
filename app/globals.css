@@ -475,11 +475,11 @@ h2 {
   margin: 0 0 5px;
 }
 
-.resume-entry p {
+.resume-description {
   font-size: 14px;
   color: var(--muted);
   line-height: 1.6;
-  margin: 0 0 5px;
+  margin: 12px 0 0;
 }
 
 .resume-location {

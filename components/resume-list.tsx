@@ -6,10 +6,15 @@ export default function ResumeList({ entries }: { entries: ResumeEntry[] }) {
       {entries.map((entry) => (
         <li className="resume-entry" key={entry.organization}>
           <div className="resume-detail">
-            <h3>{entry.organization}</h3>
-            <p>{entry.title}</p>
+            <h3>
+              {entry.organization}
+              {entry.title && ` · ${entry.title}`}
+            </h3>
             {entry.location && (
               <span className="resume-location">{entry.location}</span>
+            )}
+            {entry.description && (
+              <p className="resume-description">{entry.description}</p>
             )}
           </div>
           <span className="resume-dates">
