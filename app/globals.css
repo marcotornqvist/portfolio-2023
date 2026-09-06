@@ -74,16 +74,64 @@ img {
 }
 
 .monogram {
-  display: grid;
-  place-items: center;
+  position: relative;
+  display: block;
+  flex-shrink: 0;
   width: 42px;
   height: 42px;
-  background: var(--green);
-  color: var(--paper);
-  font-size: 23px;
-  letter-spacing: -2px;
-  border-radius: 50%;
-  padding-right: 2px;
+}
+
+.monogram > img {
+  width: 100%;
+  height: 100%;
+}
+
+.monogram-animation {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.monogram[data-animating] > img {
+  visibility: hidden;
+}
+
+.monogram[data-animating] .monogram-animation {
+  visibility: visible;
+}
+
+.logo-preview {
+  padding-bottom: 80px;
+}
+
+.logo-preview-stage {
+  display: grid;
+  place-items: center;
+  min-height: 340px;
+  margin-block: 32px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #e9ede4;
+}
+
+.logo-preview-stage .monogram {
+  width: 192px;
+  height: 192px;
+}
+
+.logo-preview-play {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.logo-preview-note {
+  margin-top: 18px;
+  max-width: 540px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
 }
 
 .nav-links {
@@ -692,7 +740,6 @@ h2 {
   .monogram {
     width: 36px;
     height: 36px;
-    font-size: 21px;
   }
 
   .nav-links {

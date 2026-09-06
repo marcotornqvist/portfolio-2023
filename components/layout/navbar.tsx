@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import ArrowIcon from 'components/arrow-icon';
+import Logo from 'components/logo';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -10,9 +10,7 @@ export default function Navbar() {
   return (
     <header className="site-header page-width">
       <Link href="/" className="brand" aria-label="Marco Törnqvist — home">
-        <span className="monogram" aria-hidden="true">
-          mt.
-        </span>
+        <Logo />
         <span className="brand-name">Marco Törnqvist</span>
       </Link>
       <nav aria-label="Main navigation">
