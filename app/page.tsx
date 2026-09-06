@@ -17,16 +17,22 @@ export default function Home() {
             <span>Marco Törnqvist</span>
           </h1>
           <p className="intro">
-            Hi, I’m Marco. I build considered digital experiences that help people
-            and businesses move forward. Based in Finland, working across design
-            and development.
+            Hi, I’m Marco. I build considered digital experiences that help
+            people and businesses move forward. Based in Finland, working across
+            design and development.
           </p>
           <div className="hero-actions">
             <Link href="/projects" className="button-link">
-              Explore my work <span aria-hidden="true"><ArrowIcon /></span>
+              Explore my work{' '}
+              <span aria-hidden="true">
+                <ArrowIcon />
+              </span>
             </Link>
             <a href="#contact" className="text-link">
-              Get in touch <span aria-hidden="true"><ArrowIcon /></span>
+              Get in touch{' '}
+              <span aria-hidden="true">
+                <ArrowIcon />
+              </span>
             </a>
           </div>
         </div>
@@ -55,7 +61,10 @@ export default function Home() {
             <h2 id="work-heading">A few things I’ve worked on.</h2>
           </div>
           <Link className="text-link" href="/projects">
-            All projects <span aria-hidden="true"><ArrowIcon /></span>
+            All projects{' '}
+            <span aria-hidden="true">
+              <ArrowIcon />
+            </span>
           </Link>
         </div>
         <div className="project-grid">
@@ -84,14 +93,14 @@ export default function Home() {
         </div>
         <div className="about-copy">
           <p>
-            I’m a software developer with an eye for design. Since 2018, I’ve been
-            exploring how thoughtful interfaces and well-built software can make
-            everyday experiences better.
+            I’m a software developer with an eye for design. Since 2018, I’ve
+            been exploring how thoughtful interfaces and well-built software can
+            make everyday experiences better.
           </p>
           <p>
-            My work spans public-sector services, digital products, and independent
-            web projects. I enjoy connecting the details: from the first design
-            idea to the final line of code.
+            My work spans public-sector services, digital products, and
+            independent web projects. I enjoy connecting the details: from the
+            first design idea to the final line of code.
           </p>
           <ul className="skill-list" aria-label="Areas of focus">
             <li>Fullstack Development</li>
@@ -108,13 +117,37 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <section
+        className="section page-width recommendation-section"
+        aria-labelledby="recommendation-heading"
+      >
+        <div>
+          <p className="eyebrow">03 / Recommendation</p>
+          <h2 id="recommendation-heading">A word from a collaborator.</h2>
+        </div>
+        <figure className="recommendation-card">
+          <blockquote className="recommendation-quote" lang="fi">
+            <p>
+              Marco worked with us as a freelance software developer and quickly
+              proved himself to be a highly capable and reliable professional.
+              He delivered high-quality work, adapted quickly to the assignment,
+              and received excellent feedback. We would gladly work with him
+              again.
+            </p>
+          </blockquote>
+          <figcaption className="recommendation-author">
+            <strong>Mikael Korpi</strong>
+            <span>ilmiö talent agency</span>
+          </figcaption>
+        </figure>
+      </section>
 
       <section
         className="section page-width resume-section"
         aria-labelledby="experience-heading"
       >
         <div>
-          <p className="eyebrow">03 / Experience</p>
+          <p className="eyebrow">04 / Experience</p>
           <h2 id="experience-heading">The journey so far.</h2>
         </div>
         <ResumeList entries={experience} />
@@ -124,7 +157,7 @@ export default function Home() {
         aria-labelledby="education-heading"
       >
         <div>
-          <p className="eyebrow">04 / Education</p>
+          <p className="eyebrow">05 / Education</p>
           <h2 id="education-heading">Where it started.</h2>
         </div>
         <ResumeList entries={education} />

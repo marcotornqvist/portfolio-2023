@@ -77,7 +77,7 @@ export const experience: ResumeEntry[] = [
     end: 'Present',
     location: 'Finland · Remote',
     description:
-      'Designing and developing accessible websites, from smaller client projects to supporting work for publicly listed companies.',
+      'Designing and developing accessible websites, from smaller client projects to supporting work for larger clients.',
   },
   {
     organization: 'Vincit',
