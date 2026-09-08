@@ -297,7 +297,7 @@ img {
 
 .hero h1 {
   font-family: var(--font-display), Georgia, serif;
-  font-size: clamp(64px, 7.8vw, 108px);
+  font-size: clamp(64px, 7.8vw, 96px);
   line-height: 1.02;
   letter-spacing: -0.055em;
   font-weight: 600;

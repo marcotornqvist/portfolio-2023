@@ -10,17 +10,17 @@ export default function Home() {
     <>
       <section className="hero page-width" aria-labelledby="intro-heading">
         <div className="hero-masthead">
-          <span>Design-minded. Developer at heart.</span>
+          <span>Turning curious ideas into useful things.</span>
           <span>Finland / Working everywhere</span>
         </div>
-        <div className="hero-copy">
-          <p className="hero-role">Hello, I’m</p>
+        <div className="hero-copy pt-4">
           <h1 id="intro-heading">
             Marco <span className="hero-period">Törnqvist.</span>
           </h1>
           <p className="intro">
-            A software developer with an eye for design. I build websites,
-            digital products, and the bits that make them work.
+            Hi, I'm a Software Developer based in Finland. My driving passion is
+            to create seamless and elegant applications that help my clients
+            succeed and reach their goals.
           </p>
           <div className="hero-actions">
             <Link href="/projects" className="text-link hero-work-link">
@@ -79,22 +79,18 @@ export default function Home() {
       >
         <div>
           <p className="eyebrow">02 / A little about me</p>
-          <h2 id="about-heading">
-            Curious by nature.
-            <br />
-            Practical by approach.
-          </h2>
+          <h2 id="about-heading">Behind the Pixels</h2>
         </div>
         <div className="about-copy">
           <p>
-            I’m a software developer with an eye for design. Since 2018, I’ve
-            been exploring how thoughtful interfaces and well-built software can
-            make everyday experiences better.
+            Since 2018, I’ve been exploring how thoughtful interfaces and
+            well-built software can make everyday experiences better.
           </p>
           <p>
             My work spans public-sector services, digital products, and
             independent web projects. I enjoy connecting the details: from the
-            first design idea to the final line of code.
+            first design idea to the final line of code. Always eager to discuss
+            fresh project ideas and innovations.
           </p>
           <ul className="skill-list" aria-label="Areas of focus">
             <li>Fullstack Development</li>
@@ -105,6 +101,7 @@ export default function Home() {
             <li>UX/UI</li>
             <li>Accessibility</li>
             <li>Headless CMS</li>
+            <li>Generative AI</li>
           </ul>
           <p className="language-note">
             Comfortable in Finnish, Swedish, and English.
