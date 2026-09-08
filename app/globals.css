@@ -174,10 +174,141 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
   align-items: center;
-  gap: 80px;
-  padding-block: 112px 120px;
+  gap: 20px 24px;
+  padding-block: 24px 28px;
+}
+
+.hero-masthead,
+.hero-footnote {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.hero-masthead {
+  margin-bottom: 18px;
+}
+
+.hero-footnote {
+  margin-top: 28px;
+}
+
+.hero-footnote a {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 44px;
+  margin-block: -12px;
+  color: var(--green);
+}
+
+.hero-illustration {
+  margin: 0;
+  mix-blend-mode: multiply;
+}
+
+.hero-illustration img {
+  width: 100%;
+  height: auto;
+}
+
+.portrait-reveal {
+  display: block;
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.portrait-reveal > img {
+  width: 100%;
+  height: auto;
+}
+
+.portrait-reveal-animation {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.portrait-reveal[data-playing] > img {
+  visibility: hidden;
+}
+
+.portrait-reveal[data-playing] .portrait-reveal-animation {
+  visibility: visible;
+}
+
+.page-intro.portrait-preview {
+  padding-block: 32px 48px;
+}
+
+.page-intro.portrait-preview h1 {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.portrait-preview .eyebrow {
+  margin-bottom: 12px;
+}
+
+.portrait-preview .intro {
+  margin-bottom: 0;
+}
+
+.portrait-preview-player {
+  max-width: 360px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.portrait-preview-player button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.hero-role {
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
+
+.hero h1 {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(64px, 7.8vw, 108px);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  margin-bottom: 32px;
+}
+
+.hero h1 > span {
+  display: block;
+  color: var(--ink);
+}
+
+.hero h1 .hero-period {
+  color: var(--green);
+}
+
+.hero .intro {
+  max-width: 440px;
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.hero-work-link {
+  border-bottom: 1px solid var(--green);
+  color: var(--green);
 }
 
 .eyebrow {
@@ -190,14 +321,6 @@ img {
   display: flex;
   align-items: center;
   gap: 9px;
-}
-
-.status-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #527449;
-  box-shadow: 0 0 0 4px #e3e9dd;
 }
 
 h1,
@@ -271,7 +394,7 @@ h1 span {
 
 .portrait {
   margin: 0;
-  transform: rotate(3deg);
+  padding-bottom: 4px;
 }
 
 @property --portrait-border-angle {
@@ -295,7 +418,13 @@ h1 span {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(145deg, #d9e5cb 5%, #9bb594 35%, var(--green) 65%, #bdcebb 100%);
+  background: linear-gradient(
+    145deg,
+    #d9e5cb 5%,
+    #9bb594 35%,
+    var(--green) 65%,
+    #bdcebb 100%
+  );
   pointer-events: none;
 }
 
@@ -331,10 +460,14 @@ h1 span {
 @keyframes portrait-glow {
   0%,
   100% {
-    box-shadow: 0 0 0 0 #9bb59400, 0 0 0 0 #bdcebb00;
+    box-shadow:
+      0 0 0 0 #9bb59400,
+      0 0 0 0 #bdcebb00;
   }
   50% {
-    box-shadow: 0 0 16px 3px #9bb59470, 0 0 36px 7px #bdcebb50;
+    box-shadow:
+      0 0 16px 3px #9bb59470,
+      0 0 36px 7px #bdcebb50;
   }
 }
 
@@ -694,6 +827,38 @@ h2 {
   color: #bdcebb;
 }
 
+.footer-person {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.footer-headshot {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+}
+
+.footer-person-name,
+.footer-person-role {
+  display: block;
+}
+
+.footer-person-name {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.footer-person-role {
+  color: #bdcebb;
+  font-size: 12px;
+}
+
 .email-link {
   display: flex;
   gap: 18px;
@@ -795,13 +960,11 @@ h2 {
   }
 
   .hero {
-    grid-template-columns: 1fr 230px;
-    gap: 40px;
-    padding-block: 80px;
+    gap: 24px 0;
   }
 
   .hero h1 {
-    font-size: 48px;
+    font-size: clamp(56px, 7.8vw, 80px);
   }
 
   .about-section,
@@ -854,12 +1017,28 @@ h2 {
 
   .hero {
     grid-template-columns: 1fr;
-    padding-block: 58px 64px;
-    gap: 48px;
+    padding-block: 20px 28px;
+    gap: 28px;
+  }
+
+  .hero-masthead {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+
+  .hero-illustration {
+    width: min(100%, 300px);
+    justify-self: center;
+  }
+
+  .hero-footnote {
+    margin-top: 0;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   .hero h1 {
-    font-size: clamp(40px, 7.5vw, 57px);
+    font-size: clamp(58px, 12vw, 88px);
   }
 
   .eyebrow {
@@ -872,8 +1051,8 @@ h2 {
   }
 
   .portrait {
-    width: 220px;
-    justify-self: center;
+    width: 240px;
+    justify-self: end;
   }
 
   .portrait figcaption {

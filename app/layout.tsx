@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { Geist } from 'next/font/google';
+import { Fraunces, Geist } from 'next/font/google';
 import Navbar from 'components/layout/navbar';
 import Footer from 'components/layout/footer';
 import { siteConfig } from 'config/site';
@@ -9,6 +9,12 @@ import './globals.css';
 const geist = Geist({
   subsets: ['latin'],
   variable: '--font-geist',
+  display: 'swap',
+});
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-display',
   display: 'swap',
 });
 
@@ -25,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={geist.variable}>
+    <html lang="en" className={`${geist.variable} ${fraunces.variable}`}>
       <body id="top">
         <a className="skip-link" href="#main-content">
           Skip to content

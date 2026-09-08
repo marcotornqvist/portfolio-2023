@@ -24,8 +24,10 @@
     "eslint-plugin-unused-imports": "^4.4.1",
     "fontkit": "^2.0.4",
     "postcss": "^8.5.28",
+    "potrace": "^2.1.8",
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "^0.8.1",
+    "svg-path-parser": "^1.1.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3"
   }

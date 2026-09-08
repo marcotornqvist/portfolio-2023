@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Portrait from 'components/portrait';
 import Link from 'next/link';
 import ArrowIcon from 'components/arrow-icon';
 import ProjectCard from 'components/project-card';
@@ -9,49 +9,43 @@ export default function Home() {
   return (
     <>
       <section className="hero page-width" aria-labelledby="intro-heading">
+        <div className="hero-masthead">
+          <span>Design-minded. Developer at heart.</span>
+          <span>Finland / Working everywhere</span>
+        </div>
         <div className="hero-copy">
-          <p className="eyebrow">
-            <span className="status-dot" /> Software developer
-          </p>
+          <p className="hero-role">Hello, I’m</p>
           <h1 id="intro-heading">
-            <span>Marco Törnqvist</span>
+            Marco <span className="hero-period">Törnqvist.</span>
           </h1>
           <p className="intro">
-            Hi, I’m Marco. I build considered digital experiences that help
-            people and businesses move forward. Based in Finland, working across
-            design and development.
+            A software developer with an eye for design. I build websites,
+            digital products, and the bits that make them work.
           </p>
           <div className="hero-actions">
-            <Link href="/projects" className="button-link">
-              Explore my work{' '}
+            <Link href="/projects" className="text-link hero-work-link">
+              View selected work{' '}
               <span aria-hidden="true">
                 <ArrowIcon />
               </span>
             </Link>
             <a href="#contact" className="text-link">
-              Get in touch{' '}
+              Let’s talk{' '}
               <span aria-hidden="true">
                 <ArrowIcon />
               </span>
             </a>
           </div>
         </div>
-        <figure className="portrait">
-          <div className="portrait-image">
-            <Image
-              src="/assets/images/headshot.jpeg"
-              alt="Marco Törnqvist"
-              width={560}
-              height={680}
-              sizes="(max-width: 760px) 220px, (max-width: 1000px) 230px, 280px"
-              preload
-            />
-          </div>
-          <figcaption>
-            <span>Marco Törnqvist</span>
-            <span>Software developer</span>
-          </figcaption>
+        <figure className="hero-illustration">
+          <Portrait />
         </figure>
+        <div className="hero-footnote">
+          <span>From the first sketch to the final build.</span>
+          <a href="#work-heading">
+            A selection of my work <span aria-hidden="true">↓</span>
+          </a>
+        </div>
       </section>
 
       <section className="section page-width" aria-labelledby="work-heading">
