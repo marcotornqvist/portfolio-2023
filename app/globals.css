@@ -227,6 +227,9 @@ img {
 .portrait-reveal > img {
   width: 100%;
   height: auto;
+  /* Hidden from the first server-painted frame so the final illustration
+     never flashes before the reveal; shown again only as a fallback below. */
+  visibility: hidden;
 }
 
 .portrait-reveal-animation {
@@ -241,6 +244,18 @@ img {
 }
 
 .portrait-reveal[data-playing] .portrait-reveal-animation {
+  visibility: visible;
+}
+
+/* No reveal will run: show the final illustration straight away. */
+@media (prefers-reduced-motion: reduce) {
+  .portrait-reveal:not([data-playing]) > img {
+    visibility: visible;
+  }
+}
+
+/* The reveal could not load or failed: fall back to the final illustration. */
+.portrait-reveal[data-fallback] > img {
   visibility: visible;
 }
 
@@ -1022,6 +1037,7 @@ h2 {
   }
 
   .hero-masthead {
+    order: -2;
     font-size: 10px;
     margin-bottom: 8px;
   }

@@ -12,12 +12,20 @@ export default function Portrait({ preview = false }: { preview?: boolean }) {
     const element = container.current;
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (!element || (preview ? replay === 0 : motion.matches)) return;
+    const parent = element.parentElement;
+    parent?.removeAttribute('data-fallback');
+    parent?.setAttribute('data-playing', 'true');
     let disposed = false;
     let animation: AnimationItem | undefined;
     const restore = () => {
-      element.parentElement?.removeAttribute('data-playing');
+      parent?.removeAttribute('data-playing');
       animation?.destroy();
       animation = undefined;
+    };
+    // The reveal could not run: reveal the final illustration instead.
+    const fail = () => {
+      parent?.setAttribute('data-fallback', 'true');
+      restore();
     };
     const onMotionChange = () => {
       if (motion.matches) {
@@ -39,15 +47,14 @@ export default function Portrait({ preview = false }: { preview?: boolean }) {
         });
         animation.addEventListener('DOMLoaded', () => {
           if (disposed) return;
-          element.parentElement?.setAttribute('data-playing', 'true');
           animation?.play();
         });
         // Lottie holds the completed frame. Do not swap to the fallback:
         // the finished vector is the last frame of the reveal itself.
-        animation.addEventListener('data_failed', restore);
-        animation.addEventListener('error', restore);
+        animation.addEventListener('data_failed', fail);
+        animation.addEventListener('error', fail);
       })
-      .catch(restore);
+      .catch(fail);
     return () => {
       disposed = true;
       motion.removeEventListener('change', onMotionChange);
@@ -57,6 +64,9 @@ export default function Portrait({ preview = false }: { preview?: boolean }) {
 
   return (
     <>
+      <noscript>
+        <style>{`.portrait-reveal > img { visibility: visible; }`}</style>
+      </noscript>
       <span
         className="portrait-reveal"
         role="img"
