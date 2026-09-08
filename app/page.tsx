@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <section className="hero page-width" aria-labelledby="intro-heading">
         <div className="hero-masthead">
-          <span>Turning curious ideas into useful things.</span>
+          <span>Software Developer</span>
           <span>Finland / Working everywhere</span>
         </div>
         <div className="hero-copy pt-4">

@@ -13,11 +13,7 @@ export default function Footer() {
         <div className="footer-main">
           <div>
             <p className="eyebrow">Have something in mind?</p>
-            <h2 id="contact-heading">
-              Let’s make
-              <br />
-              something good.
-            </h2>
+            <h2 id="contact-heading">Get in touch</h2>
             <p>For a project, a question, or just a hello.</p>
           </div>
           <address className="contact-details">
